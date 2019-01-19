@@ -10,6 +10,16 @@ import Foundation
 
 class TVService {
 
+    static func urlBasePortApiVersion() -> String {
+
+        let baseURL = "http://10.0.0.4"
+        let port = 5000
+        let api = "api"
+        let version = "v1"
+
+        return baseURL + ":" + String(port) + "/" + api + "/" + version
+    }
+
     /// make a web request to a service to end the phone call
     func endCall() {
 
