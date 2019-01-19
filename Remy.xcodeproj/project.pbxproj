@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2153A221F3ADBF004C21D3 /* EndCallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */; };
 		DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929621F39E2F006B3513 /* AppDelegate.swift */; };
 		DE42929921F39E2F006B3513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929821F39E2F006B3513 /* ViewController.swift */; };
 		DE42929C21F39E2F006B3513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929A21F39E2F006B3513 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		DE21539E21F3A957004C21D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE21539F21F3A977004C21D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndCallResponse.swift; sourceTree = "<group>"; };
 		DE42929321F39E2F006B3513 /* Remy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE42929621F39E2F006B3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE42929821F39E2F006B3513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				DE42929621F39E2F006B3513 /* AppDelegate.swift */,
+				DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */,
 				DE42929821F39E2F006B3513 /* ViewController.swift */,
 				DE42929A21F39E2F006B3513 /* Main.storyboard */,
 				DE42929D21F39E30006B3513 /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 			files = (
 				DE42929921F39E2F006B3513 /* ViewController.swift in Sources */,
 				DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */,
+				DE2153A221F3ADBF004C21D3 /* EndCallResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
