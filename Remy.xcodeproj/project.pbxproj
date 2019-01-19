@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE2153A221F3ADBF004C21D3 /* EndCallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */; };
+		DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A521F3AF8C004C21D3 /* TVService.swift */; };
 		DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929621F39E2F006B3513 /* AppDelegate.swift */; };
 		DE42929921F39E2F006B3513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929821F39E2F006B3513 /* ViewController.swift */; };
 		DE42929C21F39E2F006B3513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929A21F39E2F006B3513 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		DE21539E21F3A957004C21D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE21539F21F3A977004C21D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndCallResponse.swift; sourceTree = "<group>"; };
+		DE2153A521F3AF8C004C21D3 /* TVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVService.swift; sourceTree = "<group>"; };
 		DE42929321F39E2F006B3513 /* Remy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE42929621F39E2F006B3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE42929821F39E2F006B3513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				DE4292A221F39E30006B3513 /* Info.plist */,
 				DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */,
 				DE42929A21F39E2F006B3513 /* Main.storyboard */,
+				DE2153A521F3AF8C004C21D3 /* TVService.swift */,
 				DE42929821F39E2F006B3513 /* ViewController.swift */,
 			);
 			path = Remy;
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE42929921F39E2F006B3513 /* ViewController.swift in Sources */,
+				DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */,
 				DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */,
 				DE2153A221F3ADBF004C21D3 /* EndCallResponse.swift in Sources */,
 			);
