@@ -14,7 +14,7 @@
 		DE42929C21F39E2F006B3513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929A21F39E2F006B3513 /* Main.storyboard */; };
 		DE42929E21F39E30006B3513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE42929D21F39E30006B3513 /* Assets.xcassets */; };
 		DE4292A121F39E30006B3513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */; };
-		DE4292AC21F39E30006B3513 /* RemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4292AB21F39E30006B3513 /* RemyTests.swift */; };
+		DE4292AC21F39E30006B3513 /* EndCallResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4292AB21F39E30006B3513 /* EndCallResponseTests.swift */; };
 		DE4292B721F39E30006B3513 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4292B621F39E30006B3513 /* RemyUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		DE4292A021F39E30006B3513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE4292A221F39E30006B3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4292A721F39E30006B3513 /* RemyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE4292AB21F39E30006B3513 /* RemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyTests.swift; sourceTree = "<group>"; };
+		DE4292AB21F39E30006B3513 /* EndCallResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndCallResponseTests.swift; sourceTree = "<group>"; };
 		DE4292AD21F39E30006B3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4292B221F39E30006B3513 /* RemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4292B621F39E30006B3513 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				DE4292AD21F39E30006B3513 /* Info.plist */,
-				DE4292AB21F39E30006B3513 /* RemyTests.swift */,
+				DE4292AB21F39E30006B3513 /* EndCallResponseTests.swift */,
 			);
 			path = RemyTests;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4292AC21F39E30006B3513 /* RemyTests.swift in Sources */,
+				DE4292AC21F39E30006B3513 /* EndCallResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
