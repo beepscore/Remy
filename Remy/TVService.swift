@@ -24,7 +24,7 @@ class TVService {
     func endCall() {
 
         // https://stackoverflow.com/questions/26364914/http-request-in-swift-with-post-method#26365148
-        let urlString = "http://10.0.0.4:5000/api/v1/gpio/end-phone-call/"
+        let urlString = TVService.urlBasePortApiVersion() + "/gpio/end-phone-call/"
         let url = URL(string: urlString)!
         var request = URLRequest(url: url)
 
