@@ -11,6 +11,7 @@
 		DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A521F3AF8C004C21D3 /* TVService.swift */; };
 		DE2153A821F3B7D3004C21D3 /* TVServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */; };
 		DE2153AA21F3BE18004C21D3 /* TVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A921F3BE18004C21D3 /* TVResponse.swift */; };
+		DE2153AC21F3C043004C21D3 /* TVResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */; };
 		DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929621F39E2F006B3513 /* AppDelegate.swift */; };
 		DE42929921F39E2F006B3513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929821F39E2F006B3513 /* ViewController.swift */; };
 		DE42929C21F39E2F006B3513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929A21F39E2F006B3513 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		DE2153A521F3AF8C004C21D3 /* TVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVService.swift; sourceTree = "<group>"; };
 		DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVServiceTests.swift; sourceTree = "<group>"; };
 		DE2153A921F3BE18004C21D3 /* TVResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVResponse.swift; sourceTree = "<group>"; };
+		DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVResponseTests.swift; sourceTree = "<group>"; };
 		DE42929321F39E2F006B3513 /* Remy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE42929621F39E2F006B3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE42929821F39E2F006B3513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				DE4292AD21F39E30006B3513 /* Info.plist */,
 				DE4292AB21F39E30006B3513 /* EndCallResponseTests.swift */,
+				DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */,
 				DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */,
 			);
 			path = RemyTests;
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4292AC21F39E30006B3513 /* EndCallResponseTests.swift in Sources */,
+				DE2153AC21F3C043004C21D3 /* TVResponseTests.swift in Sources */,
 				DE2153A821F3B7D3004C21D3 /* TVServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
