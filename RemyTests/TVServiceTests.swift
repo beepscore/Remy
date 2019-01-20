@@ -12,9 +12,22 @@ import XCTest
 class TVServiceTests: XCTestCase {
 
 
-    func testUrlBasePortApiVersion() {
-        XCTAssertEqual(TVService.urlBasePortApiVersion(),
+    func testBaseURLPortApiVersionString() {
+        XCTAssertEqual(TVService.baseURLPortApiVersionString(),
                        "http://10.0.0.4:5000/api/v1")
     }
+
+    func testCommandURLVolumeDecrease() {
+        let url = TVService.commandURL(tvCommand: .volumeDecrease)
+        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/volume_decrease/)"
+        XCTAssertEqual(String(describing: url), expected)
+    }
+
+    func testCommandURLVolumeIncrease() {
+        let url = TVService.commandURL(tvCommand: .volumeIncrease)
+        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/volume_increase/)"
+        XCTAssertEqual(String(describing: url), expected)
+    }
+
 
 }

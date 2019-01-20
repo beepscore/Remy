@@ -28,11 +28,12 @@ class RemoteControlVC: UIViewController {
 
     // MARK: - IBActions
 
-    @IBAction func volumeIncreaseButtonTapped(_ sender: Any) {
-        print("volumeIncreaseButtonTapped")
-    }
-
     @IBAction func volumeDecreaseButtonTapped(_ sender: Any) {
         tvService.volumeDecrease()
     }
+    
+    @IBAction func volumeIncreaseButtonTapped(_ sender: Any) {
+        tvService.volumeIncrease()
+    }
+
 }

@@ -10,8 +10,12 @@ import Foundation
 
 class TVService {
 
-    static func urlBasePortApiVersion() -> String {
+    enum TVCommand: String {
+        case volumeDecrease = "volume_decrease"
+        case volumeIncrease = "volume_increase"
+    }
 
+    static func baseURLPortApiVersionString() -> String {
         let baseURL = "http://10.0.0.4"
         let port = 5000
         let api = "api"
@@ -20,12 +24,20 @@ class TVService {
         return baseURL + ":" + String(port) + "/" + api + "/" + version
     }
 
-    /// make a web request to a service to decrease volume
-    func volumeDecrease() {
+    static func commandURL(tvCommand: TVCommand) -> URL? {
+        let urlString = TVService.baseURLPortApiVersionString() + "/tv/" + tvCommand.rawValue + "/"
+        let url = URL(string: urlString)
+        return url
+    }
+
+    /// make a web request to a service
+    func requestCommand(tvCommand: TVCommand) {
+
+        guard let url = TVService.commandURL(tvCommand: tvCommand) else {
+            return
+        }
 
         // https://stackoverflow.com/questions/26364914/http-request-in-swift-with-post-method#26365148
-        let urlString = TVService.urlBasePortApiVersion() + "/tv/volume_decrease/"
-        let url = URL(string: urlString)!
         var request = URLRequest(url: url)
 
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -61,6 +73,16 @@ class TVService {
             }
         }
         task.resume()
+    }
+
+    /// make a web request to a service to decrease volume
+    func volumeDecrease() {
+        requestCommand(tvCommand: .volumeDecrease)
+    }
+
+    /// make a web request to a service to decrease volume
+    func volumeIncrease() {
+        requestCommand(tvCommand: .volumeIncrease)
     }
 
 }
