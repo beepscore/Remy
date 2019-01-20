@@ -14,6 +14,8 @@ class RemoteControlVC: UIViewController {
     @IBOutlet weak var volumeIncreaseButton: UIButton!
     @IBOutlet weak var volumeLabel: UILabel!
 
+    @IBOutlet weak var audioLevelSlider: UISlider!
+
     let tvService = TVService()
 
     override func viewDidLoad() {
@@ -32,6 +34,8 @@ class RemoteControlVC: UIViewController {
                 return
         }
 
+        audioLevelSlider.setValue(audioLevel, animated: true)
+        
         let isLoudString = isLoud ? NSLocalizedString(" is loud", comment: "is loud") : ""
 
         // quick hack. Apple recommends against concatenating localized strings
@@ -41,6 +45,10 @@ class RemoteControlVC: UIViewController {
 
     func configureUI() {
         volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
+
+        audioLevelSlider.isUserInteractionEnabled = false
+        // https://stackoverflow.com/questions/29731891/how-can-i-make-a-vertical-slider-in-swift
+        audioLevelSlider.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
     }
 
     // MARK: - IBActions

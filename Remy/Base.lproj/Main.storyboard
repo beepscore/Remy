@@ -50,15 +50,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-160" minValue="-160" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="CTh-jK-nRF">
+                                <rect key="frame" x="223" y="115" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="vI1-hV-uw9"/>
+                                </constraints>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CTh-jK-nRF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="130-Uh-B1p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CTh-jK-nRF" secondAttribute="trailing" constant="36" id="DpL-62-wTa"/>
+                            <constraint firstItem="CTh-jK-nRF" firstAttribute="leading" secondItem="ZJK-q1-l56" secondAttribute="trailing" constant="55" id="ftp-Rh-XSb"/>
                             <constraint firstItem="ZJK-q1-l56" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="rbe-JY-8mP"/>
                             <constraint firstItem="ZJK-q1-l56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="uwg-pR-djx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="audioLevelSlider" destination="CTh-jK-nRF" id="7yM-bm-CZk"/>
                         <outlet property="volumeDecreaseButton" destination="2lL-Rq-rKS" id="WjA-1t-D0l"/>
                         <outlet property="volumeIncreaseButton" destination="b9i-xR-WId" id="3Nv-KU-u5h"/>
                         <outlet property="volumeLabel" destination="Fdy-Yj-bYW" id="hFc-Kb-71h"/>
