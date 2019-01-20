@@ -52,9 +52,11 @@
                             </stackView>
                             <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-160" minValue="-160" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="CTh-jK-nRF">
                                 <rect key="frame" x="223" y="115" width="118" height="31"/>
+                                <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="vI1-hV-uw9"/>
                                 </constraints>
+                                <color key="thumbTintColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
