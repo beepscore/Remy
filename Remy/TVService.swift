@@ -43,11 +43,16 @@ class TVService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         request.httpMethod = "POST"
+
+        // dataTask will pass data, response, error to its completionHandler
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
 
             guard let data = data, error == nil else {
                 // fundamental networking error
                 print("error=\(String(describing: error))")
+                // e.g. nw_socket_connect [C3:2] connect failed (fd 10) [64: Host is down]
+                //   - some : Error Domain=NSURLErrorDomain Code=-1005 "The network connection was lost." UserInfo={NSUnderlyingError=0x6000000f1da0 {Error Domain=kCFErrorDomainCFNetwork Code=-1005 "(null)" UserInfo={_kCFStreamErrorCodeKey=57, _kCFStreamErrorDomainKey=1}}, NSErrorFailingURLStringKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, NSErrorFailingURLKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, _kCFStreamErrorDomainKey=1, _kCFStreamErrorCodeKey=57, NSLocalizedDescription=The network connection was lost.}
+
                 return
             }
 
