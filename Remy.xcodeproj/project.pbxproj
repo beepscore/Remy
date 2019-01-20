@@ -17,6 +17,7 @@
 		DE42929E21F39E30006B3513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE42929D21F39E30006B3513 /* Assets.xcassets */; };
 		DE4292A121F39E30006B3513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */; };
 		DE4292B721F39E30006B3513 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4292B621F39E30006B3513 /* RemyUITests.swift */; };
+		DE6BDD9021F42AD500AB0B7B /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6BDD8F21F42AD500AB0B7B /* AudioMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DE4292B221F39E30006B3513 /* RemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4292B621F39E30006B3513 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
 		DE4292B821F39E30006B3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6BDD8F21F42AD500AB0B7B /* AudioMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				DE42929621F39E2F006B3513 /* AppDelegate.swift */,
+				DE6BDD8F21F42AD500AB0B7B /* AudioMonitor.swift */,
 				DE42929D21F39E30006B3513 /* Assets.xcassets */,
 				DE4292A221F39E30006B3513 /* Info.plist */,
 				DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 				DE42929921F39E2F006B3513 /* RemoteControlVC.swift in Sources */,
 				DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */,
 				DE2153AA21F3BE18004C21D3 /* TVResponse.swift in Sources */,
+				DE6BDD9021F42AD500AB0B7B /* AudioMonitor.swift in Sources */,
 				DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
