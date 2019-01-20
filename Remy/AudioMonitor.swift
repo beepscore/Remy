@@ -13,13 +13,17 @@ import AVFoundation
 /// https://stackoverflow.com/questions/35929989/how-to-monitor-audio-input-on-ios-using-swift-example
 class AudioMonitor {
 
-    var recorder: AVAudioRecorder?
-    var levelTimer = Timer()
+    static let audioLevelNotificationName = Notification.Name("audioLevelNotification")
+    static let audioLevelKey = "audioLevel"
+    static let isLoudKey = "isLoud"
 
     // decibels (dbA?)
     // 0 dB indicates full scale, or maximum power
     // -160 dB indicates minimum power (that is, near silence)
-    let LEVEL_THRESHOLD: Float = -10.0
+    static let levelThreshold: Float = -10.0
+
+    var recorder: AVAudioRecorder?
+    var levelTimer = Timer()
 
     init() {
 
@@ -84,10 +88,17 @@ class AudioMonitor {
         recorder.updateMeters()
         let level = recorder.averagePower(forChannel: 0)
 
-        let isLoud = level > LEVEL_THRESHOLD
+        let isLoud = level > AudioMonitor.levelThreshold
 
         // do whatever you want with isLoud
         print("levelTimerCallback sound level: \(level) decibel, isLoud: \(isLoud)")
+
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: AudioMonitor.audioLevelNotificationName,
+                                            object: .none,
+                                            userInfo: [AudioMonitor.audioLevelKey: level,
+                                                       AudioMonitor.isLoudKey: isLoud])
+        }
     }
 
     @objc func stopRecordingAndDelete() {
