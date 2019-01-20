@@ -12,6 +12,5 @@ import Foundation
 struct TVResponse: Codable {
     var api_name: String
     var response: String
-    var status: String
     var version: String
 }

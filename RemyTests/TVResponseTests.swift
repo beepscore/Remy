@@ -14,12 +14,10 @@ class TVResponseTests: XCTestCase {
     func testTVResponse() {
         let response = TVResponse(api_name: "foo",
                                   response: "bar",
-                                  status: "SUCCESS",
                                   version: "3.5")
 
         XCTAssertEqual(response.api_name, "foo")
         XCTAssertEqual(response.response, "bar")
-        XCTAssertEqual(response.status, "SUCCESS")
         XCTAssertEqual(response.version, "3.5")
     }
 

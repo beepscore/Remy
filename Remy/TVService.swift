@@ -67,11 +67,9 @@ class TVService {
             do {
                 let tvResponse = try decoder.decode(TVResponse.self, from: data)
                 print("tvResponse", tvResponse)
-
-                if tvResponse.status == "SUCCESS" {
-                    // TODO: consider post notification, a visible view controller
-                    // can opt to show toast similar to Android toast
-                }
+                // TODO: consider post notification, a visible view controller
+                // can opt to show toast similar to Android toast
+                
             } catch {
                 print("error trying to convert data to JSON")
                 print(error)
