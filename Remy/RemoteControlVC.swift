@@ -44,6 +44,9 @@ class RemoteControlVC: UIViewController {
     }
 
     func configureUI() {
+        let cornerRadius = CGFloat(8.0)
+        volumeDecreaseButton.layer.cornerRadius = cornerRadius
+        volumeIncreaseButton.layer.cornerRadius = cornerRadius
         volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
 
         audioLevelSlider.isUserInteractionEnabled = false
