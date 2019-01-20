@@ -13,7 +13,7 @@
 		DE2153AA21F3BE18004C21D3 /* TVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A921F3BE18004C21D3 /* TVResponse.swift */; };
 		DE2153AC21F3C043004C21D3 /* TVResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */; };
 		DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929621F39E2F006B3513 /* AppDelegate.swift */; };
-		DE42929921F39E2F006B3513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929821F39E2F006B3513 /* ViewController.swift */; };
+		DE42929921F39E2F006B3513 /* RemoteControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42929821F39E2F006B3513 /* RemoteControlVC.swift */; };
 		DE42929C21F39E2F006B3513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929A21F39E2F006B3513 /* Main.storyboard */; };
 		DE42929E21F39E30006B3513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE42929D21F39E30006B3513 /* Assets.xcassets */; };
 		DE4292A121F39E30006B3513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */; };
@@ -48,7 +48,7 @@
 		DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVResponseTests.swift; sourceTree = "<group>"; };
 		DE42929321F39E2F006B3513 /* Remy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE42929621F39E2F006B3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE42929821F39E2F006B3513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE42929821F39E2F006B3513 /* RemoteControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlVC.swift; sourceTree = "<group>"; };
 		DE42929B21F39E2F006B3513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE42929D21F39E30006B3513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4292A021F39E30006B3513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				DE42929A21F39E2F006B3513 /* Main.storyboard */,
 				DE2153A921F3BE18004C21D3 /* TVResponse.swift */,
 				DE2153A521F3AF8C004C21D3 /* TVService.swift */,
-				DE42929821F39E2F006B3513 /* ViewController.swift */,
+				DE42929821F39E2F006B3513 /* RemoteControlVC.swift */,
 			);
 			path = Remy;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE42929921F39E2F006B3513 /* ViewController.swift in Sources */,
+				DE42929921F39E2F006B3513 /* RemoteControlVC.swift in Sources */,
 				DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */,
 				DE2153AA21F3BE18004C21D3 /* TVResponse.swift in Sources */,
 				DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */,
