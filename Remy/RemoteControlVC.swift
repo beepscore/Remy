@@ -10,9 +10,29 @@ import UIKit
 
 class RemoteControlVC: UIViewController {
 
+    @IBOutlet weak var volumeDecreaseButton: UIButton!
+    @IBOutlet weak var volumeIncreaseButton: UIButton!
+    @IBOutlet weak var volumeLabel: UILabel!
+
+    let tvService = TVService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        configureUI()
     }
 
+    func configureUI() {
+        volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
+    }
+
+    // MARK: - IBActions
+
+    @IBAction func volumeIncreaseButtonTapped(_ sender: Any) {
+        print("volumeIncreaseButtonTapped")
+    }
+
+    @IBAction func volumeDecreaseButtonTapped(_ sender: Any) {
+        tvService.volumeDecrease()
+    }
 }

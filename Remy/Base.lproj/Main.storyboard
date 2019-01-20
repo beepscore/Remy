@@ -17,9 +17,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-q1-l56">
+                                <rect key="frame" x="32" y="84" width="138" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GMa-uB-Uhn">
+                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9i-xR-WId">
+                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="volumeIncreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F1m-5V-9f3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lL-Rq-rKS">
+                                                <rect key="frame" x="0.0" y="49" width="57.5" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="volumeDecreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vM-Qt-orn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdy-Yj-bYW">
+                                        <rect key="frame" x="80.5" y="35" width="57.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZJK-q1-l56" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="rbe-JY-8mP"/>
+                            <constraint firstItem="ZJK-q1-l56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="uwg-pR-djx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="volumeDecreaseButton" destination="2lL-Rq-rKS" id="WjA-1t-D0l"/>
+                        <outlet property="volumeIncreaseButton" destination="b9i-xR-WId" id="3Nv-KU-u5h"/>
+                        <outlet property="volumeLabel" destination="Fdy-Yj-bYW" id="hFc-Kb-71h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -52,10 +52,8 @@ class TVService {
                 print("endCallResponse", endCallResponse)
 
                 if endCallResponse.status == "SUCCESS" {
-                    // NOTE: expectServerResponseStatusSuccess.fulfill
-                    // just shows the server processed the endCall request.
-                    // It doesn't guarantee that a phone call connected or ended
-                    // expectServerResponseStatusSuccess.fulfill()
+                    // TODO: consider post notification, a visible view controller
+                    // can opt to show toast similar to Android toast
                 }
             } catch {
                 print("error trying to convert data to JSON")
@@ -97,7 +95,8 @@ class TVService {
                 print("tvResponse", tvResponse)
 
                 if tvResponse.status == "SUCCESS" {
-                    // TODO: consider show toast similar to Android toast
+                    // TODO: consider post notification, a visible view controller
+                    // can opt to show toast similar to Android toast
                 }
             } catch {
                 print("error trying to convert data to JSON")
