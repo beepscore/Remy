@@ -11,8 +11,8 @@ import Foundation
 class TVService {
 
     enum TVCommand: String {
-        case volumeDecrease = "volume_decrease"
-        case volumeIncrease = "volume_increase"
+        case volumeDecrease = "volume-decrease"
+        case volumeIncrease = "volume-increase"
     }
 
     static func baseURLPortApiVersionString() -> String {

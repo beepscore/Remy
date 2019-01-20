@@ -19,13 +19,13 @@ class TVServiceTests: XCTestCase {
 
     func testCommandURLVolumeDecrease() {
         let url = TVService.commandURL(tvCommand: .volumeDecrease)
-        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/volume_decrease/)"
+        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/volume-decrease/)"
         XCTAssertEqual(String(describing: url), expected)
     }
 
     func testCommandURLVolumeIncrease() {
         let url = TVService.commandURL(tvCommand: .volumeIncrease)
-        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/volume_increase/)"
+        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/volume-increase/)"
         XCTAssertEqual(String(describing: url), expected)
     }
 
