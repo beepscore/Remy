@@ -25,8 +25,11 @@ class AudioMonitor {
 
         let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
 
+        // NOTE: on simulator, file extension .m4a prevents recording from starting.
+        // Also using .m4a may lead to call to deinit()
+        // Didn't check on device.
+        // let url = documents.appendingPathComponent("recording.m4a")
         let url = documents.appendingPathComponent("record.caf")
-        //let url = documents.appendingPathComponent("recording.m4a")
 
         let recordSettings: [String: Any] = [
             AVFormatIDKey:              kAudioFormatAppleIMA4,
@@ -57,7 +60,9 @@ class AudioMonitor {
         recorder.isMeteringEnabled = true
 
         // recorder.record()
-        let recordingDurationSecond = 300.0
+        let recordingDurationMinute = 30
+        let secondPerMinute = 60
+        let recordingDurationSecond = TimeInterval(secondPerMinute * recordingDurationMinute)
         recorder.record(forDuration: recordingDurationSecond)
 
         // let timeIntervalSecond = 0.2
@@ -85,7 +90,8 @@ class AudioMonitor {
         print("levelTimerCallback sound level: \(level) decibel, isLoud: \(isLoud)")
     }
 
-    @IBAction func stopRecording() {
+    @objc func stopRecordingAndDelete() {
+        print("stopRecordingAndDelete")
         recorder?.stop()
         // The audio recorder must be stopped before you call deleteRecording.
         recorder?.deleteRecording()
@@ -93,7 +99,7 @@ class AudioMonitor {
     }
 
     deinit {
-        stopRecording()
+        stopRecordingAndDelete()
     }
 
 }

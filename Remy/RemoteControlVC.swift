@@ -14,8 +14,6 @@ class RemoteControlVC: UIViewController {
     @IBOutlet weak var volumeIncreaseButton: UIButton!
     @IBOutlet weak var volumeLabel: UILabel!
 
-    var audioMonitor = AudioMonitor()
-
     let tvService = TVService()
 
     override func viewDidLoad() {
