@@ -40,7 +40,7 @@ class RemoteControlVC: UIViewController {
 
         // quick hack. Apple recommends against concatenating localized strings
         volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
-            + " " + String(audioLevel) + isLoudString
+            + " " + String(Int(audioLevel)) + isLoudString
     }
 
     func configureUI() {
