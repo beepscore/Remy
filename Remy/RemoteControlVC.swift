@@ -19,7 +19,24 @@ class RemoteControlVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        NotificationCenter.default.addObserver(self, selector: #selector(audioLevelNotification(_:)),
+                                               name: AudioMonitor.audioLevelNotificationName,
+                                               object: .none)
         configureUI()
+    }
+
+    @objc func audioLevelNotification(_ notification: Notification) {
+        guard let audioLevel = notification.userInfo?[AudioMonitor.audioLevelKey] as? Float,
+            let isLoud = notification.userInfo?[AudioMonitor.isLoudKey] as? Bool else {
+                return
+        }
+
+        let isLoudString = isLoud ? NSLocalizedString(" is loud", comment: "is loud") : ""
+
+        // quick hack. Apple recommends against concatenating localized strings
+        volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
+            + " " + String(audioLevel) + isLoudString
     }
 
     func configureUI() {
