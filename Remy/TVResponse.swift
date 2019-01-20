@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// response from TVService
+/// response from TVService e.g. service_piface.py for piface relay
 struct TVResponse: Codable {
     var api_name: String
     var response: String

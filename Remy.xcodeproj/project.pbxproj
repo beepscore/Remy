@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE2153A221F3ADBF004C21D3 /* EndCallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */; };
 		DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A521F3AF8C004C21D3 /* TVService.swift */; };
 		DE2153A821F3B7D3004C21D3 /* TVServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */; };
 		DE2153AA21F3BE18004C21D3 /* TVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A921F3BE18004C21D3 /* TVResponse.swift */; };
@@ -17,7 +16,6 @@
 		DE42929C21F39E2F006B3513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929A21F39E2F006B3513 /* Main.storyboard */; };
 		DE42929E21F39E30006B3513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE42929D21F39E30006B3513 /* Assets.xcassets */; };
 		DE4292A121F39E30006B3513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */; };
-		DE4292AC21F39E30006B3513 /* EndCallResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4292AB21F39E30006B3513 /* EndCallResponseTests.swift */; };
 		DE4292B721F39E30006B3513 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4292B621F39E30006B3513 /* RemyUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +39,6 @@
 /* Begin PBXFileReference section */
 		DE21539E21F3A957004C21D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE21539F21F3A977004C21D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndCallResponse.swift; sourceTree = "<group>"; };
 		DE2153A521F3AF8C004C21D3 /* TVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVService.swift; sourceTree = "<group>"; };
 		DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVServiceTests.swift; sourceTree = "<group>"; };
 		DE2153A921F3BE18004C21D3 /* TVResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVResponse.swift; sourceTree = "<group>"; };
@@ -54,7 +51,6 @@
 		DE4292A021F39E30006B3513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE4292A221F39E30006B3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4292A721F39E30006B3513 /* RemyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE4292AB21F39E30006B3513 /* EndCallResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndCallResponseTests.swift; sourceTree = "<group>"; };
 		DE4292AD21F39E30006B3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4292B221F39E30006B3513 /* RemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4292B621F39E30006B3513 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
@@ -113,7 +109,6 @@
 			children = (
 				DE42929621F39E2F006B3513 /* AppDelegate.swift */,
 				DE42929D21F39E30006B3513 /* Assets.xcassets */,
-				DE2153A121F3ADBF004C21D3 /* EndCallResponse.swift */,
 				DE4292A221F39E30006B3513 /* Info.plist */,
 				DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */,
 				DE42929A21F39E2F006B3513 /* Main.storyboard */,
@@ -128,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				DE4292AD21F39E30006B3513 /* Info.plist */,
-				DE4292AB21F39E30006B3513 /* EndCallResponseTests.swift */,
 				DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */,
 				DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */,
 			);
@@ -279,7 +273,6 @@
 				DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */,
 				DE2153AA21F3BE18004C21D3 /* TVResponse.swift in Sources */,
 				DE42929721F39E2F006B3513 /* AppDelegate.swift in Sources */,
-				DE2153A221F3ADBF004C21D3 /* EndCallResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4292AC21F39E30006B3513 /* EndCallResponseTests.swift in Sources */,
 				DE2153AC21F3C043004C21D3 /* TVResponseTests.swift in Sources */,
 				DE2153A821F3B7D3004C21D3 /* TVServiceTests.swift in Sources */,
 			);
