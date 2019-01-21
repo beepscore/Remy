@@ -27,7 +27,9 @@ class AudioMonitor {
     var recorder: AVAudioRecorder?
     var levelTimer = Timer()
 
-    init() {
+    static let shared = AudioMonitor()
+
+    private init() {
 
         let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
 

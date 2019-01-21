@@ -17,7 +17,8 @@ class RemoteControlVC: UIViewController {
     @IBOutlet weak var audioLevelLabel: UILabel!
     @IBOutlet weak var audioLevelSlider: UISlider!
     @IBOutlet weak var audioLimitSlider: UISlider!
-    
+
+    var audioMonitor: AudioMonitor?
 
     let tvService = TVService()
 
@@ -28,6 +29,7 @@ class RemoteControlVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(audioLevelNotification(_:)),
                                                name: AudioMonitor.audioLevelNotificationName,
                                                object: .none)
+        audioMonitor = AudioMonitor.shared
         configureUI()
     }
 
@@ -40,8 +42,7 @@ class RemoteControlVC: UIViewController {
         audioLevelSlider.setValue(audioLevel, animated: true)
         audioLevelLabel.text = String(Int(audioLevel))
 
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        if let audioThreshold = appDelegate?.audioMonitor?.levelDbThreshold {
+        if let audioThreshold = audioMonitor?.levelDbThreshold {
             tintAudioLevelSlider(audioLevel: audioLevel, audioThreshold: audioThreshold)
         }
     }
@@ -84,8 +85,7 @@ class RemoteControlVC: UIViewController {
 
     // MARK: - IBActions
     @IBAction func audioLimitSlider(_ sender: UISlider) {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        appDelegate?.audioMonitor?.levelDbThreshold = sender.value
+        audioMonitor?.levelDbThreshold = sender.value
     }
 
     @IBAction func volumeDecreaseButtonTapped(_ sender: Any) {

@@ -14,11 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var audioMonitor: AudioMonitor?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        audioMonitor = AudioMonitor()
+        audioMonitor = AudioMonitor.shared
 
         return true
     }
