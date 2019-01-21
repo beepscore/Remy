@@ -75,13 +75,9 @@ class RemoteControlVC: UIViewController {
     }
 
     func tintAudioLevelSlider(audioLevel: Float, audioThreshold: Float) {
-        if audioLevel > audioThreshold {
-            audioLevelSlider.tintColor = .red
-            audioLevelSlider.thumbTintColor = .red
-        } else {
-            audioLevelSlider.tintColor = .green
-            audioLevelSlider.thumbTintColor = .green
-        }
+        let tintColor: UIColor = (audioLevel > audioThreshold) ? .red : .green
+        audioLevelSlider.tintColor = tintColor
+        audioLevelSlider.thumbTintColor = tintColor
     }
 
     // MARK: - IBActions
