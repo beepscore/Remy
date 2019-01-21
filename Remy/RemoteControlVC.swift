@@ -39,9 +39,8 @@ class RemoteControlVC: UIViewController {
                 return
         }
 
-        audioLevelSlider.setValue(audioLevel, animated: true)
         audioLevelLabel.text = String(Int(audioLevel))
-
+        audioLevelSlider.setValue(audioLevel, animated: true)
         if let audioThreshold = audioMonitor?.levelDbThreshold {
             tintAudioLevelSlider(audioLevel: audioLevel, audioThreshold: audioThreshold)
         }
