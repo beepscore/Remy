@@ -61,14 +61,15 @@ class RemoteControlVC: UIViewController {
         audioLevelSlider.isUserInteractionEnabled = false
         audioLevelSlider.minimumValue = AudioMonitor.levelMinDb
         audioLevelSlider.maximumValue = AudioMonitor.levelMaxDb
-        audioLevelSlider.value = AudioMonitor.levelMaxDb / 2
+        // levelMaxDb == 0 and levelMinDb is < 0, so use levelMinDb/2
+        audioLevelSlider.value = AudioMonitor.levelMinDb / 2
         audioLevelSlider.tintColor = .green
         audioLevelSlider.thumbTintColor = .green
 
         audioLimitSlider.isUserInteractionEnabled = true
         audioLimitSlider.minimumValue = AudioMonitor.levelMinDb
         audioLimitSlider.maximumValue = AudioMonitor.levelMaxDb
-        audioLimitSlider.value = AudioMonitor.levelMaxDb / 2
+        audioLimitSlider.value = audioMonitor?.levelDbThreshold ?? 0.0
         audioLimitSlider.tintColor = .black
         audioLimitSlider.thumbTintColor = .black
     }

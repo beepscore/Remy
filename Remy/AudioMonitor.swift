@@ -22,7 +22,8 @@ class AudioMonitor {
     static let levelMaxDb: Float = 0.0
     // -160 dB indicates minimum power (that is, near silence)
     static let levelMinDb: Float = -160.0
-    var levelDbThreshold: Float = -10.0
+    // choose arbitrary initial value
+    var levelDbThreshold: Float = -20.0
 
     var recorder: AVAudioRecorder?
     var levelTimer = Timer()
