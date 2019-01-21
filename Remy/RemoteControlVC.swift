@@ -14,7 +14,10 @@ class RemoteControlVC: UIViewController {
     @IBOutlet weak var volumeIncreaseButton: UIButton!
     @IBOutlet weak var volumeLabel: UILabel!
 
+    @IBOutlet weak var audioLevelLabel: UILabel!
     @IBOutlet weak var audioLevelSlider: UISlider!
+    @IBOutlet weak var audioLimitSlider: UISlider!
+    
 
     let tvService = TVService()
 
@@ -30,31 +33,60 @@ class RemoteControlVC: UIViewController {
 
     @objc func audioLevelNotification(_ notification: Notification) {
         guard let audioLevel = notification.userInfo?[AudioMonitor.audioLevelKey] as? Float,
-            let isLoud = notification.userInfo?[AudioMonitor.isLoudKey] as? Bool else {
+            let _ = notification.userInfo?[AudioMonitor.isLoudKey] as? Bool else {
                 return
         }
 
         audioLevelSlider.setValue(audioLevel, animated: true)
-        
-        let isLoudString = isLoud ? NSLocalizedString(" is loud", comment: "is loud") : ""
+        audioLevelLabel.text = String(Int(audioLevel))
 
-        // quick hack. Apple recommends against concatenating localized strings
-        volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
-            + " " + String(Int(audioLevel)) + isLoudString
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        if let audioThreshold = appDelegate?.audioMonitor?.levelDbThreshold {
+            tintAudioLevelSlider(audioLevel: audioLevel, audioThreshold: audioThreshold)
+        }
     }
 
     func configureUI() {
+        configureSliders()
+
         let cornerRadius = CGFloat(8.0)
         volumeDecreaseButton.layer.cornerRadius = cornerRadius
         volumeIncreaseButton.layer.cornerRadius = cornerRadius
-        volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
 
+        volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
+    }
+
+    func configureSliders() {
         audioLevelSlider.isUserInteractionEnabled = false
-        // https://stackoverflow.com/questions/29731891/how-can-i-make-a-vertical-slider-in-swift
-        audioLevelSlider.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
+        audioLevelSlider.minimumValue = AudioMonitor.levelMinDb
+        audioLevelSlider.maximumValue = AudioMonitor.levelMaxDb
+        audioLevelSlider.value = AudioMonitor.levelMaxDb / 2
+        audioLevelSlider.tintColor = .green
+        audioLevelSlider.thumbTintColor = .green
+
+        audioLimitSlider.isUserInteractionEnabled = true
+        audioLimitSlider.minimumValue = AudioMonitor.levelMinDb
+        audioLimitSlider.maximumValue = AudioMonitor.levelMaxDb
+        audioLimitSlider.value = AudioMonitor.levelMaxDb / 2
+        audioLimitSlider.tintColor = .black
+        audioLimitSlider.thumbTintColor = .black
+    }
+
+    func tintAudioLevelSlider(audioLevel: Float, audioThreshold: Float) {
+        if audioLevel > audioThreshold {
+            audioLevelSlider.tintColor = .red
+            audioLevelSlider.thumbTintColor = .red
+        } else {
+            audioLevelSlider.tintColor = .green
+            audioLevelSlider.thumbTintColor = .green
+        }
     }
 
     // MARK: - IBActions
+    @IBAction func audioLimitSlider(_ sender: UISlider) {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.audioMonitor?.levelDbThreshold = sender.value
+    }
 
     @IBAction func volumeDecreaseButtonTapped(_ sender: Any) {
         tvService.volumeDecrease()

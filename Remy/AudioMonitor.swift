@@ -19,8 +19,10 @@ class AudioMonitor {
 
     // decibels (dbA?)
     // 0 dB indicates full scale, or maximum power
+    static let levelMaxDb: Float = 0.0
     // -160 dB indicates minimum power (that is, near silence)
-    static let levelThreshold: Float = -10.0
+    static let levelMinDb: Float = -160.0
+    var levelDbThreshold: Float = -10.0
 
     var recorder: AVAudioRecorder?
     var levelTimer = Timer()
@@ -88,7 +90,7 @@ class AudioMonitor {
         recorder.updateMeters()
         let level = recorder.averagePower(forChannel: 0)
 
-        let isLoud = level > AudioMonitor.levelThreshold
+        let isLoud = level > levelDbThreshold
 
         // do whatever you want with isLoud
         print("levelTimerCallback sound level: \(level) decibel, isLoud: \(isLoud)")
