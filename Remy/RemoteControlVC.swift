@@ -10,8 +10,14 @@ import UIKit
 
 class RemoteControlVC: UIViewController {
 
+    @IBOutlet weak var bassDecreaseButton: UIButton!
+    @IBOutlet weak var bassIncreaseButton: UIButton!
+    @IBOutlet weak var voiceDecreaseButton: UIButton!
+    @IBOutlet weak var voiceIncreaseButton: UIButton!
     @IBOutlet weak var volumeDecreaseButton: UIButton!
     @IBOutlet weak var volumeIncreaseButton: UIButton!
+    @IBOutlet weak var bassLabel: UILabel!
+    @IBOutlet weak var voiceLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
 
     @IBOutlet weak var audioLevelLabel: UILabel!
@@ -50,9 +56,15 @@ class RemoteControlVC: UIViewController {
         configureSliders()
 
         let cornerRadius = CGFloat(8.0)
+        bassDecreaseButton.layer.cornerRadius = cornerRadius
+        bassIncreaseButton.layer.cornerRadius = cornerRadius
+        voiceDecreaseButton.layer.cornerRadius = cornerRadius
+        voiceIncreaseButton.layer.cornerRadius = cornerRadius
         volumeDecreaseButton.layer.cornerRadius = cornerRadius
         volumeIncreaseButton.layer.cornerRadius = cornerRadius
 
+        bassLabel.text = NSLocalizedString("Bass", comment: "Bass")
+        voiceLabel.text = NSLocalizedString("Voice", comment: "Voice")
         volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
     }
 
@@ -82,6 +94,14 @@ class RemoteControlVC: UIViewController {
     // MARK: - IBActions
     @IBAction func audioLimitSlider(_ sender: UISlider) {
         audioMonitor?.levelDbThreshold = sender.value
+    }
+
+    @IBAction func voiceDecreaseButtonTapped(_ sender: Any) {
+        tvService.voiceDecrease()
+    }
+
+    @IBAction func voiceIncreaseButtonTapped(_ sender: Any) {
+        tvService.voiceIncrease()
     }
 
     @IBAction func volumeDecreaseButtonTapped(_ sender: Any) {

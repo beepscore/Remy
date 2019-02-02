@@ -18,15 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-q1-l56">
-                                <rect key="frame" x="26" y="274" width="138" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-q1-l56">
+                                <rect key="frame" x="16" y="200" width="343" height="146.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GMa-uB-Uhn">
-                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="118"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="146.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9i-xR-WId">
-                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="55"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
                                                 <state key="normal" title="+">
@@ -36,8 +35,14 @@
                                                     <action selector="volumeIncreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F1m-5V-9f3"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdy-Yj-bYW">
+                                                <rect key="frame" x="0.0" y="63" width="99" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lL-Rq-rKS">
-                                                <rect key="frame" x="0.0" y="63" width="57.5" height="55"/>
+                                                <rect key="frame" x="0.0" y="91.5" width="99" height="55"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
                                                 <state key="normal" title="-">
@@ -49,12 +54,66 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdy-Yj-bYW">
-                                        <rect key="frame" x="80.5" y="49" width="57.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JNB-3M-6AI">
+                                        <rect key="frame" x="122" y="0.0" width="99" height="146.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ4-a9-hjG">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="55"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="voiceIncreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdR-cQ-L5Z"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0j-XB-ga5">
+                                                <rect key="frame" x="0.0" y="63" width="99" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUN-xy-aZ6">
+                                                <rect key="frame" x="0.0" y="91.5" width="99" height="55"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="voiceDecreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J3p-OM-eKD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1yJ-Px-Hkg">
+                                        <rect key="frame" x="244" y="0.0" width="99" height="146.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-zD-G48">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="55"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bass" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK3-kH-FtV">
+                                                <rect key="frame" x="0.0" y="63" width="99" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbb-1y-iQf">
+                                                <rect key="frame" x="0.0" y="91.5" width="99" height="55"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="LwX-VR-WVe">
@@ -107,8 +166,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZJK-q1-l56" secondAttribute="trailing" constant="16" id="IOB-MU-EGw"/>
+                            <constraint firstItem="ZJK-q1-l56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RLr-5Y-EuU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LwX-VR-WVe" secondAttribute="trailing" constant="16" id="dAh-vL-JsE"/>
                             <constraint firstItem="LwX-VR-WVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kDv-FW-eSm"/>
+                            <constraint firstItem="ZJK-q1-l56" firstAttribute="top" secondItem="LwX-VR-WVe" secondAttribute="bottom" constant="64" id="sWo-1n-Who"/>
                             <constraint firstItem="LwX-VR-WVe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="ycq-o8-okI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -117,6 +179,12 @@
                         <outlet property="audioLevelLabel" destination="zWX-2T-e2p" id="UaP-0h-UyQ"/>
                         <outlet property="audioLevelSlider" destination="CTh-jK-nRF" id="7yM-bm-CZk"/>
                         <outlet property="audioLimitSlider" destination="nfM-iC-hgA" id="6k3-fx-wtk"/>
+                        <outlet property="bassDecreaseButton" destination="nbb-1y-iQf" id="K0g-gP-FDi"/>
+                        <outlet property="bassIncreaseButton" destination="gFd-zD-G48" id="Hcy-ah-UgS"/>
+                        <outlet property="bassLabel" destination="oK3-kH-FtV" id="LkK-vW-Xun"/>
+                        <outlet property="voiceDecreaseButton" destination="lUN-xy-aZ6" id="9SQ-CH-zdf"/>
+                        <outlet property="voiceIncreaseButton" destination="hZ4-a9-hjG" id="y10-dD-vUX"/>
+                        <outlet property="voiceLabel" destination="S0j-XB-ga5" id="bz7-cu-1Hs"/>
                         <outlet property="volumeDecreaseButton" destination="2lL-Rq-rKS" id="WjA-1t-D0l"/>
                         <outlet property="volumeIncreaseButton" destination="b9i-xR-WId" id="3Nv-KU-u5h"/>
                         <outlet property="volumeLabel" destination="Fdy-Yj-bYW" id="hFc-Kb-71h"/>
