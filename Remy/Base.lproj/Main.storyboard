@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-q1-l56">
-                                <rect key="frame" x="16" y="200" width="343" height="146.5"/>
+                                <rect key="frame" x="16" y="214" width="343" height="146.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GMa-uB-Uhn">
                                         <rect key="frame" x="0.0" y="0.0" width="99" height="146.5"/>
@@ -163,14 +163,33 @@
                                     <constraint firstAttribute="trailing" secondItem="Frx-iE-Yh1" secondAttribute="trailing" id="io1-h9-uEf"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="223" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-em-8r6">
+                                <rect key="frame" x="16" y="152" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJ7-wB-GKM">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                        <state key="normal" title="Power"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8X-ey-rOg">
+                                        <rect key="frame" x="308" y="0.0" width="35" height="30"/>
+                                        <state key="normal" title="Mute"/>
+                                        <connections>
+                                            <action selector="muteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0DN-wJ-pn5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lqc-em-8r6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5Md-Ov-zOX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZJK-q1-l56" secondAttribute="trailing" constant="16" id="IOB-MU-EGw"/>
+                            <constraint firstItem="ZJK-q1-l56" firstAttribute="top" secondItem="lqc-em-8r6" secondAttribute="bottom" constant="32" id="JTl-7B-6iB"/>
                             <constraint firstItem="ZJK-q1-l56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RLr-5Y-EuU"/>
+                            <constraint firstItem="lqc-em-8r6" firstAttribute="top" secondItem="LwX-VR-WVe" secondAttribute="bottom" constant="16" id="XKg-Xb-d8V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lqc-em-8r6" secondAttribute="trailing" constant="16" id="d5Y-Fe-WwS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LwX-VR-WVe" secondAttribute="trailing" constant="16" id="dAh-vL-JsE"/>
                             <constraint firstItem="LwX-VR-WVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kDv-FW-eSm"/>
-                            <constraint firstItem="ZJK-q1-l56" firstAttribute="top" secondItem="LwX-VR-WVe" secondAttribute="bottom" constant="64" id="sWo-1n-Who"/>
                             <constraint firstItem="LwX-VR-WVe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="ycq-o8-okI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -182,6 +201,7 @@
                         <outlet property="bassDecreaseButton" destination="nbb-1y-iQf" id="K0g-gP-FDi"/>
                         <outlet property="bassIncreaseButton" destination="gFd-zD-G48" id="Hcy-ah-UgS"/>
                         <outlet property="bassLabel" destination="oK3-kH-FtV" id="LkK-vW-Xun"/>
+                        <outlet property="powerButton" destination="aJ7-wB-GKM" id="tDe-KO-oRu"/>
                         <outlet property="voiceDecreaseButton" destination="lUN-xy-aZ6" id="9SQ-CH-zdf"/>
                         <outlet property="voiceIncreaseButton" destination="hZ4-a9-hjG" id="y10-dD-vUX"/>
                         <outlet property="voiceLabel" destination="S0j-XB-ga5" id="bz7-cu-1Hs"/>

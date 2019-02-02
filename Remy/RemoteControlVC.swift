@@ -12,6 +12,7 @@ class RemoteControlVC: UIViewController {
 
     @IBOutlet weak var bassDecreaseButton: UIButton!
     @IBOutlet weak var bassIncreaseButton: UIButton!
+    @IBOutlet weak var powerButton: UIButton!
     @IBOutlet weak var voiceDecreaseButton: UIButton!
     @IBOutlet weak var voiceIncreaseButton: UIButton!
     @IBOutlet weak var volumeDecreaseButton: UIButton!
@@ -54,14 +55,7 @@ class RemoteControlVC: UIViewController {
 
     func configureUI() {
         configureSliders()
-
-        let cornerRadius = CGFloat(8.0)
-        bassDecreaseButton.layer.cornerRadius = cornerRadius
-        bassIncreaseButton.layer.cornerRadius = cornerRadius
-        voiceDecreaseButton.layer.cornerRadius = cornerRadius
-        voiceIncreaseButton.layer.cornerRadius = cornerRadius
-        volumeDecreaseButton.layer.cornerRadius = cornerRadius
-        volumeIncreaseButton.layer.cornerRadius = cornerRadius
+        configureButtons()
 
         bassLabel.text = NSLocalizedString("Bass", comment: "Bass")
         voiceLabel.text = NSLocalizedString("Voice", comment: "Voice")
@@ -85,6 +79,21 @@ class RemoteControlVC: UIViewController {
         audioLimitSlider.thumbTintColor = .black
     }
 
+    func configureButtons() {
+        // not implemented yet
+        bassDecreaseButton.isEnabled = false
+        bassIncreaseButton.isEnabled = false
+        powerButton.isEnabled = false
+
+        let cornerRadius = CGFloat(8.0)
+        bassDecreaseButton.layer.cornerRadius = cornerRadius
+        bassIncreaseButton.layer.cornerRadius = cornerRadius
+        voiceDecreaseButton.layer.cornerRadius = cornerRadius
+        voiceIncreaseButton.layer.cornerRadius = cornerRadius
+        volumeDecreaseButton.layer.cornerRadius = cornerRadius
+        volumeIncreaseButton.layer.cornerRadius = cornerRadius
+    }
+
     func tintAudioLevelSlider(audioLevel: Float, audioThreshold: Float) {
         let tintColor: UIColor = (audioLevel > audioThreshold) ? .red : .green
         audioLevelSlider.tintColor = tintColor
@@ -94,6 +103,10 @@ class RemoteControlVC: UIViewController {
     // MARK: - IBActions
     @IBAction func audioLimitSlider(_ sender: UISlider) {
         audioMonitor?.levelDbThreshold = sender.value
+    }
+
+    @IBAction func muteButtonTapped(_ sender: Any) {
+        tvService.mute()
     }
 
     @IBAction func voiceDecreaseButtonTapped(_ sender: Any) {

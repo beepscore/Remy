@@ -11,6 +11,7 @@ import Foundation
 class TVService {
 
     enum TVCommand: String {
+        case mute = "mute"
         case voiceDecrease = "voice-decrease"
         case voiceIncrease = "voice-increase"
         case volumeDecrease = "volume-decrease"
@@ -78,6 +79,11 @@ class TVService {
             }
         }
         task.resume()
+    }
+
+    /// make a web request to a service to mute sound
+    func mute() {
+        requestCommand(tvCommand: .mute)
     }
 
     /// make a web request to a service to decrease volume
