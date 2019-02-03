@@ -12,6 +12,7 @@ class TVService {
 
     enum TVCommand: String {
         case mute = "mute"
+        case power = "power"
         case voiceDecrease = "voice-decrease"
         case voiceIncrease = "voice-increase"
         case volumeDecrease = "volume-decrease"
@@ -72,7 +73,7 @@ class TVService {
                 print("tvResponse", tvResponse)
                 // TODO: consider post notification, a visible view controller
                 // can opt to show toast similar to Android toast
-                
+
             } catch {
                 print("error trying to convert data to JSON")
                 print(error)
@@ -84,6 +85,11 @@ class TVService {
     /// make a web request to a service to mute sound
     func mute() {
         requestCommand(tvCommand: .mute)
+    }
+
+    /// make a web request to a service to turn power off or on
+    func power() {
+        requestCommand(tvCommand: .power)
     }
 
     /// make a web request to a service to decrease volume

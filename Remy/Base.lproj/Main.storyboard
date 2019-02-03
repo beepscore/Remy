@@ -169,6 +169,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJ7-wB-GKM">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
                                         <state key="normal" title="Power"/>
+                                        <connections>
+                                            <action selector="powerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7Y-PK-sYb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8X-ey-rOg">
                                         <rect key="frame" x="308" y="0.0" width="35" height="30"/>
@@ -201,7 +204,6 @@
                         <outlet property="bassDecreaseButton" destination="nbb-1y-iQf" id="K0g-gP-FDi"/>
                         <outlet property="bassIncreaseButton" destination="gFd-zD-G48" id="Hcy-ah-UgS"/>
                         <outlet property="bassLabel" destination="oK3-kH-FtV" id="LkK-vW-Xun"/>
-                        <outlet property="powerButton" destination="aJ7-wB-GKM" id="tDe-KO-oRu"/>
                         <outlet property="voiceDecreaseButton" destination="lUN-xy-aZ6" id="9SQ-CH-zdf"/>
                         <outlet property="voiceIncreaseButton" destination="hZ4-a9-hjG" id="y10-dD-vUX"/>
                         <outlet property="voiceLabel" destination="S0j-XB-ga5" id="bz7-cu-1Hs"/>
