@@ -97,6 +97,9 @@
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="bassIncreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CO8-cF-Rtl"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bass" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK3-kH-FtV">
                                                 <rect key="frame" x="0.0" y="63" width="99" height="20.5"/>
@@ -111,6 +114,9 @@
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="bassDecreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0d0-TC-xQ0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

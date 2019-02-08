@@ -86,10 +86,6 @@ class RemoteControlVC: UIViewController {
         voiceIncreaseButton.layer.cornerRadius = cornerRadius
         volumeDecreaseButton.layer.cornerRadius = cornerRadius
         volumeIncreaseButton.layer.cornerRadius = cornerRadius
-
-        // not implemented yet
-        bassDecreaseButton.isEnabled = false
-        bassIncreaseButton.isEnabled = false
     }
 
     func tintAudioLevelSlider(audioLevel: Float, audioThreshold: Float) {
@@ -109,6 +105,14 @@ class RemoteControlVC: UIViewController {
 
     @IBAction func powerButtonTapped(_ sender: Any) {
         tvService.power()
+    }
+
+    @IBAction func bassDecreaseButtonTapped(_ sender: Any) {
+        tvService.bassDecrease()
+    }
+
+    @IBAction func bassIncreaseButtonTapped(_ sender: Any) {
+        tvService.bassIncrease()
     }
 
     @IBAction func voiceDecreaseButtonTapped(_ sender: Any) {
