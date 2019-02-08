@@ -5,6 +5,18 @@ The Raspberry Pi may have an infrared LED and operate as an infrared remote cont
 
 # References
 
+## Swift iOS to Raspberry Pi TV Remote Control
+http://beepscore.com/website/2019/02/08/swift-ios-to-raspberry-pi-tv-remote-control.html
+
+## iOS - Detect Blow into Mic and convert the results! (swift)
+https://stackoverflow.com/questions/31230854/ios-detect-blow-into-mic-and-convert-the-results-swift
+
+## How to monitor audio input on ios using swift - example?
+https://stackoverflow.com/questions/35929989/how-to-monitor-audio-input-on-ios-using-swift-example
+
+## Network enabled Raspberry Pi tv remote control
+http://beepscore.com/website/2019/02/05/network-enabled-raspberry-pi-tv-remote-control.html
+
 ## remy_python
 Make a Python app with two parts:
 - A Flask web service to accept television command requests (e.g. volume decrease, volume increase).
@@ -18,4 +30,4 @@ branch request_web_service_end_call
 https://github.com/beepscore/Phoney
 
 # Results
-
+See code and tests.
