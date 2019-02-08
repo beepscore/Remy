@@ -29,6 +29,18 @@ class TVServiceTests: XCTestCase {
         XCTAssertEqual(String(describing: url), expected)
     }
 
+    func testCommandURLBassDecrease() {
+        let url = TVService.commandURL(tvCommand: .bassDecrease)
+        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/bass-decrease/)"
+        XCTAssertEqual(String(describing: url), expected)
+    }
+
+    func testCommandURLBassIncrease() {
+        let url = TVService.commandURL(tvCommand: .bassIncrease)
+        let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/bass-increase/)"
+        XCTAssertEqual(String(describing: url), expected)
+    }
+
     func testCommandURLVoiceDecrease() {
         let url = TVService.commandURL(tvCommand: .voiceDecrease)
         let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/voice-decrease/)"

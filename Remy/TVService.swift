@@ -13,6 +13,8 @@ class TVService {
     enum TVCommand: String {
         case mute = "mute"
         case power = "power"
+        case bassDecrease = "bass-decrease"
+        case bassIncrease = "bass-increase"
         case voiceDecrease = "voice-decrease"
         case voiceIncrease = "voice-increase"
         case volumeDecrease = "volume-decrease"
@@ -92,12 +94,22 @@ class TVService {
         requestCommand(tvCommand: .power)
     }
 
-    /// make a web request to a service to decrease volume
+    /// make a web request to a service to decrease bass
+    func bassDecrease() {
+        requestCommand(tvCommand: .bassDecrease)
+    }
+
+    /// make a web request to a service to increase bass
+    func bassIncrease() {
+        requestCommand(tvCommand: .bassIncrease)
+    }
+    
+    /// make a web request to a service to decrease voice
     func voiceDecrease() {
         requestCommand(tvCommand: .voiceDecrease)
     }
 
-    /// make a web request to a service to decrease voice
+    /// make a web request to a service to increase voice
     func voiceIncrease() {
         requestCommand(tvCommand: .voiceIncrease)
     }
@@ -107,7 +119,7 @@ class TVService {
         requestCommand(tvCommand: .volumeDecrease)
     }
 
-    /// make a web request to a service to decrease volume
+    /// make a web request to a service to increase volume
     func volumeIncrease() {
         requestCommand(tvCommand: .volumeIncrease)
     }
