@@ -95,7 +95,6 @@ class AudioMonitor {
 
         let isLoud = level > levelDbThreshold
 
-        // do whatever you want with isLoud
         print("levelTimerCallback sound level: \(level) decibel, isLoud: \(isLoud)")
 
         DispatchQueue.main.async {
