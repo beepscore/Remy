@@ -31,3 +31,20 @@ https://github.com/beepscore/Phoney
 
 # Results
 See code and tests.
+
+## unit tests
+Unit tests may be run in simulator or on device.
+Need to grant microphone permission to iPhone or to macOS running simulator.
+
+### how to fix unit tests not running on device
+The device may get into a state where tests "fail" immediately e.g.
+
+    Remy.app encountered an error (Failed to establish communication with the test runner.
+    (Underlying error: Unable to connect to test manager on 91281e8da160abcce5dad7950c47fbf64f02f8e3.
+    (Underlying error: kAMDMuxConnectError: Could not connect to the device.)))
+
+I think one way this can happen if the user denied the app microphone permission.
+
+To fix this, delete app from device. Turn device completely off and back on. Reinstall app.
+
+Run tests, grant microphone permission.
