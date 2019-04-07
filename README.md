@@ -48,3 +48,6 @@ I think one way this can happen if the user denied the app microphone permission
 To fix this, delete app from device. Turn device completely off and back on. Reinstall app.
 
 Run tests, grant microphone permission.
+
+See also https://stackoverflow.com/questions/53643318/xctests-canceling-prematurely
+
