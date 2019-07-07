@@ -133,10 +133,10 @@
 		DE4292AA21F39E30006B3513 /* RemyTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE838B8822D243C8001E4927 /* FileUtilTests.swift */,
 				DE4292AD21F39E30006B3513 /* Info.plist */,
 				DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */,
 				DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */,
-				DE838B8822D243C8001E4927 /* FileUtilTests.swift */,
 			);
 			path = RemyTests;
 			sourceTree = "<group>";

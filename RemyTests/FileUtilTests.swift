@@ -12,9 +12,16 @@ import XCTest
 
 class FileUtilTests: XCTestCase {
 
-    func testBaseFileName() {
+    func testBaseFilenameFoo() {
         let path = "bar/foo.swift"
-        XCTAssertEqual(FileUtil.baseFileName(path: path), "foo")
+        XCTAssertEqual(FileUtil.baseFilename(path: path), "foo")
+    }
+
+    func testBaseFilenameFile() {
+        let path = #file
+        // "/Users/stevebaker/Documents/projects/iOSProjects/Remy/RemyTests/FileUtilTests.swift"
+        
+        XCTAssertEqual(FileUtil.baseFilename(path: path), "FileUtilTests")
     }
 
 }
