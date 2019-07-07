@@ -51,11 +51,13 @@ class TVService {
 
         request.httpMethod = "POST"
 
+        // Apple suggests don't log line number, don't wrap this in a function??
         // https://stackoverflow.com/questions/52366951/apple-unified-logging-how-to-get-file-name-and-line-number
         os_log("file: %s function: %s line: %i %s",
                log: Logger.shared.log,
                type: .debug,
-               FileUtil.baseFilename(path: #file), #function, #line, String(describing: request))
+               FileUtil.baseFilename(path: #file), #function, #line,
+               String(describing: request))
 
         // dataTask will pass data, response, error to its completionHandler
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
