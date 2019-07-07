@@ -51,12 +51,13 @@ class TVService {
 
         request.httpMethod = "POST"
 
-        // Apple suggests don't log line number, don't wrap this in a function??
+        // Apple suggests "Don’t include symbol information or source file line numbers in messages. The system automatically captures this information."
+        // https://developer.apple.com/documentation/os/logging
         // https://stackoverflow.com/questions/52366951/apple-unified-logging-how-to-get-file-name-and-line-number
-        os_log("file: %s function: %s line: %i %s",
+        os_log("file: %s function: %s %s",
                log: Logger.shared.log,
                type: .debug,
-               FileUtil.baseFilename(path: #file), #function, #line,
+               FileUtil.baseFilename(path: #file), #function,
                String(describing: request))
 
         // dataTask will pass data, response, error to its completionHandler
