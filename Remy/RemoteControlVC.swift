@@ -100,8 +100,8 @@ class RemoteControlVC: UIViewController {
             switch result {
             case .success(let tvResponse):
                 self.statusLabel.text = tvResponse.message
-            case .failure:
-                self.statusLabel.text = String(describing: result)
+            case .failure(let error):
+                self.statusLabel.text = String(describing: error)
             }
         }
     }
