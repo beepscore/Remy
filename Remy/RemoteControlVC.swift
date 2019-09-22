@@ -28,7 +28,7 @@ class RemoteControlVC: UIViewController {
 
     var audioMonitor: AudioMonitor?
 
-    let tvService = TVService()
+    let tvService = TVService(timeoutSeconds: 10)
 
     override func viewDidLoad() {
         super.viewDidLoad()

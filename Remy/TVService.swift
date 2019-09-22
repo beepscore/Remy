@@ -22,6 +22,16 @@ class TVService {
         case volumeIncrease = "volume-increase"
     }
 
+    let urlSession: URLSession
+
+    init(timeoutSeconds: Int) {
+        // https://stackoverflow.com/questions/23428793/nsurlsession-how-to-increase-time-out-for-url-requests
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = TimeInterval(timeoutSeconds)
+        config.timeoutIntervalForResource = TimeInterval(timeoutSeconds)
+        urlSession = URLSession(configuration: config)
+    }
+
     static func baseURLPortApiVersionString() -> String {
         let baseURL = "http://10.0.0.4"
         let port = 5000
@@ -61,7 +71,7 @@ class TVService {
                String(describing: request))
 
         // dataTask will pass data, response, error to its completionHandler
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = urlSession.dataTask(with: request) { data, response, error in
 
             // https://stackoverflow.com/questions/55847474/how-to-use-new-result-type-introduced-in-swift-5-urlsession
 
