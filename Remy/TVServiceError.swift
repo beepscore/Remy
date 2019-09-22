@@ -23,6 +23,7 @@ extension TVServiceError {
     public var errorDescription: String? {
         switch self {
         case let .httpError(status, message):
+            // e.g. "404 Not Found"
             return "\(status) \(message)"
         default:
             return self.localizedDescription
