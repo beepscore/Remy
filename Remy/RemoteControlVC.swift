@@ -106,7 +106,7 @@ class RemoteControlVC: UIViewController {
             DispatchQueue.main.async {
                 switch res {
                 case .success:
-                    self.statusLabel.text = "mute succeeded"
+                    self.statusLabel.text = "mute toggled"
                 case .failure:
                     self.statusLabel.text = String(describing: res)
                 }
@@ -115,31 +115,94 @@ class RemoteControlVC: UIViewController {
     }
 
     @IBAction func powerButtonTapped(_ sender: Any) {
-        tvService.power()
+        tvService.power() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "power toggled"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
     @IBAction func bassDecreaseButtonTapped(_ sender: Any) {
-        tvService.bassDecrease()
+        tvService.bassDecrease() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "bass decreased"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
     @IBAction func bassIncreaseButtonTapped(_ sender: Any) {
-        tvService.bassIncrease()
+        tvService.bassIncrease() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "bass increased"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
     @IBAction func voiceDecreaseButtonTapped(_ sender: Any) {
-        tvService.voiceDecrease()
+        tvService.voiceDecrease() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "voice decreased"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
     @IBAction func voiceIncreaseButtonTapped(_ sender: Any) {
-        tvService.voiceIncrease()
+        tvService.voiceIncrease() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "voice increased"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
     @IBAction func volumeDecreaseButtonTapped(_ sender: Any) {
-        tvService.volumeDecrease()
+        tvService.volumeDecrease() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "volume decreased"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
     @IBAction func volumeIncreaseButtonTapped(_ sender: Any) {
-        tvService.volumeIncrease()
+        tvService.volumeIncrease() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "volume increased"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
 }

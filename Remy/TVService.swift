@@ -108,87 +108,45 @@ class TVService {
     }
 
     /// make a web request to a service to turn power off or on
-    func power() {
-        requestCommand(tvCommand: .power) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func power(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .power,  completion: completion)
     }
 
     /// make a web request to a service to decrease bass
-    func bassDecrease() {
-        requestCommand(tvCommand: .bassDecrease) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func bassDecrease(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .bassDecrease,  completion: completion)
     }
 
     /// make a web request to a service to increase bass
-    func bassIncrease() {
-        requestCommand(tvCommand: .bassIncrease) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func bassIncrease(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .bassIncrease,  completion: completion)
     }
     
     /// make a web request to a service to decrease voice
-    func voiceDecrease() {
-        requestCommand(tvCommand: .voiceDecrease) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func voiceDecrease(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .voiceDecrease,  completion: completion)
     }
 
     /// make a web request to a service to increase voice
-    func voiceIncrease() {
-        requestCommand(tvCommand: .voiceIncrease) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func voiceIncrease(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .voiceIncrease,  completion: completion)
     }
 
     /// make a web request to a service to decrease volume
-    func volumeDecrease() {
-        requestCommand(tvCommand: .volumeDecrease) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func volumeDecrease(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .volumeDecrease,  completion: completion)
     }
 
     /// make a web request to a service to increase volume
-    func volumeIncrease() {
-        requestCommand(tvCommand: .volumeIncrease) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func volumeIncrease(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .volumeIncrease,  completion: completion)
     }
 
 }
