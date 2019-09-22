@@ -10,6 +10,8 @@ import UIKit
 
 class RemoteControlVC: UIViewController {
 
+    @IBOutlet weak var statusLabel: UILabel!
+
     @IBOutlet weak var bassDecreaseButton: UIButton!
     @IBOutlet weak var bassIncreaseButton: UIButton!
     @IBOutlet weak var voiceDecreaseButton: UIButton!
@@ -100,7 +102,16 @@ class RemoteControlVC: UIViewController {
     }
 
     @IBAction func muteButtonTapped(_ sender: Any) {
-        tvService.mute()
+        tvService.mute() { res in
+            DispatchQueue.main.async {
+                switch res {
+                case .success:
+                    self.statusLabel.text = "mute succeeded"
+                case .failure:
+                    self.statusLabel.text = String(describing: res)
+                }
+            }
+        }
     }
 
     @IBAction func powerButtonTapped(_ sender: Any) {

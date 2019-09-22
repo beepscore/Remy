@@ -102,15 +102,9 @@ class TVService {
     }
 
     /// make a web request to a service to mute sound
-    func mute() {
-        requestCommand(tvCommand: .mute) { res in
-            switch res {
-            case .success:
-                print("success")
-            case .failure:
-                print("failure")
-            }
-        }
+    /// - Parameter completion: passed along to requestCommand
+    func mute(completion: @escaping (Result<TVResponse, Error>) -> Void) {
+        requestCommand(tvCommand: .mute,  completion: completion)
     }
 
     /// make a web request to a service to turn power off or on
