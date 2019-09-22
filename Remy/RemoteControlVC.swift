@@ -96,6 +96,17 @@ class RemoteControlVC: UIViewController {
         audioLevelSlider.thumbTintColor = tintColor
     }
 
+    func updateStatusLabel(result: Result<TVResponse, Error>) {
+        DispatchQueue.main.async {
+            switch result {
+            case .success(let tvResponse):
+                self.statusLabel.text = tvResponse.response
+            case .failure:
+                self.statusLabel.text = String(describing: result)
+            }
+        }
+    }
+
     // MARK: - IBActions
     @IBAction func audioLimitSlider(_ sender: UISlider) {
         audioMonitor?.levelDbThreshold = sender.value
@@ -103,105 +114,49 @@ class RemoteControlVC: UIViewController {
 
     @IBAction func muteButtonTapped(_ sender: Any) {
         tvService.mute() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self.statusLabel.text = "mute toggled"
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
     @IBAction func powerButtonTapped(_ sender: Any) {
         tvService.power() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self.statusLabel.text = "power toggled"
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
     @IBAction func bassDecreaseButtonTapped(_ sender: Any) {
         tvService.bassDecrease() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self.statusLabel.text = "bass decreased"
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
     @IBAction func bassIncreaseButtonTapped(_ sender: Any) {
         tvService.bassIncrease() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self.statusLabel.text = "bass increased"
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
     @IBAction func voiceDecreaseButtonTapped(_ sender: Any) {
         tvService.voiceDecrease() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self.statusLabel.text = "voice decreased"
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
     @IBAction func voiceIncreaseButtonTapped(_ sender: Any) {
         tvService.voiceIncrease() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self.statusLabel.text = "voice increased"
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
     @IBAction func volumeDecreaseButtonTapped(_ sender: Any) {
         tvService.volumeDecrease() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success(let tvResponse):
-                    self.statusLabel.text = tvResponse.response
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
     @IBAction func volumeIncreaseButtonTapped(_ sender: Any) {
         tvService.volumeIncrease() { res in
-            DispatchQueue.main.async {
-                switch res {
-                case .success:
-                    self.statusLabel.text = "volume increased"
-                case .failure:
-                    self.statusLabel.text = String(describing: res)
-                }
-            }
+            self.updateStatusLabel(result: res)
         }
     }
 
