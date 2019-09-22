@@ -11,13 +11,13 @@ import XCTest
 
 class TVResponseTests: XCTestCase {
 
-    func testTVResponse() {
+    func testTVResponseInit() {
         let response = TVResponse(api_name: "foo",
-                                  response: "bar",
+                                  message: "bar",
                                   version: "3.5")
 
         XCTAssertEqual(response.api_name, "foo")
-        XCTAssertEqual(response.response, "bar")
+        XCTAssertEqual(response.message, "bar")
         XCTAssertEqual(response.version, "3.5")
     }
 

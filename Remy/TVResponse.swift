@@ -11,6 +11,6 @@ import Foundation
 /// response from TVService e.g. service_piface.py for piface relay
 struct TVResponse: Codable {
     let api_name: String
-    let response: String
+    let message: String
     let version: String
 }
