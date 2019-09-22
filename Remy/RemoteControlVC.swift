@@ -83,14 +83,6 @@ class RemoteControlVC: UIViewController {
     }
 
     func configureButtons() {
-        let cornerRadius = CGFloat(8.0)
-        bassDecreaseButton.layer.cornerRadius = cornerRadius
-        bassIncreaseButton.layer.cornerRadius = cornerRadius
-        voiceDecreaseButton.layer.cornerRadius = cornerRadius
-        voiceIncreaseButton.layer.cornerRadius = cornerRadius
-        volumeDecreaseButton.layer.cornerRadius = cornerRadius
-        volumeIncreaseButton.layer.cornerRadius = cornerRadius
-
         powerButton.setTitle( NSLocalizedString("POWER", comment: "POWER"),
                               for: .normal)
         muteButton.setTitle( NSLocalizedString("MUTE", comment: "MUTE"),
