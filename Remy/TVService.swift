@@ -38,17 +38,17 @@ class TVService {
     }
 
     /// make a web request to a service
-    func requestCommand(tvCommand: TVCommand) {
+    func requestCommand(tvCommand: TVCommand,
+                        completion: @escaping (Result<TVResponse, Error>) -> Void) {
 
         guard let url = TVService.commandURL(tvCommand: tvCommand) else {
+            completion(.failure(TVServiceError.urlNil))
             return
         }
 
         // https://stackoverflow.com/questions/26364914/http-request-in-swift-with-post-method#26365148
         var request = URLRequest(url: url)
-
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
         request.httpMethod = "POST"
 
         // Apple suggests "Don’t include symbol information or source file line numbers in messages. The system automatically captures this information."
@@ -63,33 +63,39 @@ class TVService {
         // dataTask will pass data, response, error to its completionHandler
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
 
-            guard let data = data, error == nil else {
-                // fundamental networking error
+            // https://stackoverflow.com/questions/55847474/how-to-use-new-result-type-introduced-in-swift-5-urlsession
 
-                print("error=\(String(describing: error))")
-                // e.g. nw_socket_connect [C3:2] connect failed (fd 10) [64: Host is down]
-                //   - some : Error Domain=NSURLErrorDomain Code=-1005 "The network connection was lost." UserInfo={NSUnderlyingError=0x6000000f1da0 {Error Domain=kCFErrorDomainCFNetwork Code=-1005 "(null)" UserInfo={_kCFStreamErrorCodeKey=57, _kCFStreamErrorDomainKey=1}}, NSErrorFailingURLStringKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, NSErrorFailingURLKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, _kCFStreamErrorDomainKey=1, _kCFStreamErrorCodeKey=57, NSLocalizedDescription=The network connection was lost.}
-
+            if let error = error {
+                completion(.failure(error))
                 return
             }
 
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                // http error
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(String(describing: response))")
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(TVServiceError.responseNil))
+                return
+            }
+
+            if !(200...299).contains(httpResponse.statusCode)
+                && (httpResponse.statusCode != 304) {
+                // print("error=\(String(describing: error))")
+                // e.g. nw_socket_connect [C3:2] connect failed (fd 10) [64: Host is down]
+                //   - some : Error Domain=NSURLErrorDomain Code=-1005 "The network connection was lost." UserInfo={NSUnderlyingError=0x6000000f1da0 {Error Domain=kCFErrorDomainCFNetwork Code=-1005 "(null)" UserInfo={_kCFStreamErrorCodeKey=57, _kCFStreamErrorDomainKey=1}}, NSErrorFailingURLStringKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, NSErrorFailingURLKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, _kCFStreamErrorDomainKey=1, _kCFStreamErrorCodeKey=57, NSLocalizedDescription=The network connection was lost.}
+
+                completion(.failure(TVServiceError.httpError(String(httpResponse.statusCode))))
+                return
+            }
+
+            guard let data = data else {
+                completion(.failure(TVServiceError.dataNil))
                 return
             }
 
             let decoder = JSONDecoder()
             do {
                 let tvResponse = try decoder.decode(TVResponse.self, from: data)
-                print("tvResponse", tvResponse)
-                // TODO: consider post notification, a visible view controller
-                // can opt to show toast similar to Android toast
-
+                completion(.success(tvResponse))
             } catch {
-                print("error trying to convert data to JSON")
-                print(error)
+                completion(.failure(TVServiceError.decodingError))
             }
         }
         task.resume()
@@ -97,42 +103,98 @@ class TVService {
 
     /// make a web request to a service to mute sound
     func mute() {
-        requestCommand(tvCommand: .mute)
+        requestCommand(tvCommand: .mute) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
 
     /// make a web request to a service to turn power off or on
     func power() {
-        requestCommand(tvCommand: .power)
+        requestCommand(tvCommand: .power) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
 
     /// make a web request to a service to decrease bass
     func bassDecrease() {
-        requestCommand(tvCommand: .bassDecrease)
+        requestCommand(tvCommand: .bassDecrease) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
 
     /// make a web request to a service to increase bass
     func bassIncrease() {
-        requestCommand(tvCommand: .bassIncrease)
+        requestCommand(tvCommand: .bassIncrease) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
     
     /// make a web request to a service to decrease voice
     func voiceDecrease() {
-        requestCommand(tvCommand: .voiceDecrease)
+        requestCommand(tvCommand: .voiceDecrease) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
 
     /// make a web request to a service to increase voice
     func voiceIncrease() {
-        requestCommand(tvCommand: .voiceIncrease)
+        requestCommand(tvCommand: .voiceIncrease) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
 
     /// make a web request to a service to decrease volume
     func volumeDecrease() {
-        requestCommand(tvCommand: .volumeDecrease)
+        requestCommand(tvCommand: .volumeDecrease) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
 
     /// make a web request to a service to increase volume
     func volumeIncrease() {
-        requestCommand(tvCommand: .volumeIncrease)
+        requestCommand(tvCommand: .volumeIncrease) { res in
+            switch res {
+            case .success:
+                print("success")
+            case .failure:
+                print("failure")
+            }
+        }
     }
 
 }
