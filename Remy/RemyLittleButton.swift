@@ -23,6 +23,7 @@ class RemyLittleButton: UIButton {
     }
 
     func configure() {
+        backgroundColor = .lightGray
         layer.cornerRadius = CGFloat(8.0)
     }
 

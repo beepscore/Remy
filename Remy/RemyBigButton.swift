@@ -22,6 +22,7 @@ class RemyBigButton: UIButton {
     }
 
     func configure() {
+        backgroundColor = .lightGray
         layer.cornerRadius = CGFloat(16.0)
     }
 }
