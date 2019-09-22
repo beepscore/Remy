@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// response from TVService e.g. service_piface.py for piface relay
+/// decodes response from TVService e.g. remy_python service.py
 struct TVResponse: Codable {
     let api_name: String
     let message: String
