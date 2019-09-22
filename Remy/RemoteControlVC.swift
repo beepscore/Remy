@@ -183,8 +183,8 @@ class RemoteControlVC: UIViewController {
         tvService.volumeDecrease() { res in
             DispatchQueue.main.async {
                 switch res {
-                case .success:
-                    self.statusLabel.text = "volume decreased"
+                case .success(let tvResponse):
+                    self.statusLabel.text = tvResponse.response
                 case .failure:
                     self.statusLabel.text = String(describing: res)
                 }
