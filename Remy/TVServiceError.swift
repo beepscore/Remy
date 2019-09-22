@@ -10,7 +10,7 @@ import Foundation
 
 enum TVServiceError: LocalizedError {
     case dataNil
-    case decodingError
+    // don't implement case decodingError, use Swift DecodingError instead
     // https://stackoverflow.com/questions/39176196/how-to-provide-a-localized-description-with-an-error-type-in-swift
     // httpError has associated values
     case httpError(status: Int, message: String)
