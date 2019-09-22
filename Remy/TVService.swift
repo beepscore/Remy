@@ -24,7 +24,8 @@ class TVService {
 
     let urlSession: URLSession
 
-    init(timeoutSeconds: Int) {
+    /// - Parameter timeoutSeconds: type TimeInterval matches URLSessionConfiguration property type
+    init(timeoutSeconds: TimeInterval) {
         // https://stackoverflow.com/questions/23428793/nsurlsession-how-to-increase-time-out-for-url-requests
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = TimeInterval(timeoutSeconds)
