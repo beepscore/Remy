@@ -18,6 +18,7 @@
 		DE4292A121F39E30006B3513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE42929F21F39E30006B3513 /* LaunchScreen.storyboard */; };
 		DE4292B721F39E30006B3513 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4292B621F39E30006B3513 /* RemyUITests.swift */; };
 		DE6AB39B2337F3FB00278A81 /* RemyBigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6AB39A2337F3FB00278A81 /* RemyBigButton.swift */; };
+		DE6AB39D2337F6C800278A81 /* RemyLittleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6AB39C2337F6C800278A81 /* RemyLittleButton.swift */; };
 		DE6BDD9021F42AD500AB0B7B /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6BDD8F21F42AD500AB0B7B /* AudioMonitor.swift */; };
 		DE838B8722D243A4001E4927 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE838B8622D243A4001E4927 /* FileUtil.swift */; };
 		DE838B8922D243C8001E4927 /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE838B8822D243C8001E4927 /* FileUtilTests.swift */; };
@@ -62,6 +63,7 @@
 		DE4292B621F39E30006B3513 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
 		DE4292B821F39E30006B3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE6AB39A2337F3FB00278A81 /* RemyBigButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemyBigButton.swift; sourceTree = "<group>"; };
+		DE6AB39C2337F6C800278A81 /* RemyLittleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyLittleButton.swift; sourceTree = "<group>"; };
 		DE6BDD8F21F42AD500AB0B7B /* AudioMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 		DE838B8622D243A4001E4927 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		DE838B8822D243C8001E4927 /* FileUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtilTests.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				DE42929A21F39E2F006B3513 /* Main.storyboard */,
 				DE42929821F39E2F006B3513 /* RemoteControlVC.swift */,
 				DE6AB39A2337F3FB00278A81 /* RemyBigButton.swift */,
+				DE6AB39C2337F6C800278A81 /* RemyLittleButton.swift */,
 				DE2153A921F3BE18004C21D3 /* TVResponse.swift */,
 				DE2153A521F3AF8C004C21D3 /* TVService.swift */,
 				DEDA4F10233730E5004F1B08 /* TVServiceError.swift */,
@@ -292,6 +295,7 @@
 			files = (
 				DE42929921F39E2F006B3513 /* RemoteControlVC.swift in Sources */,
 				DEDA4F11233730E5004F1B08 /* TVServiceError.swift in Sources */,
+				DE6AB39D2337F6C800278A81 /* RemyLittleButton.swift in Sources */,
 				DE6AB39B2337F3FB00278A81 /* RemyBigButton.swift in Sources */,
 				DE838B8722D243A4001E4927 /* FileUtil.swift in Sources */,
 				DEAEDCD622D2385700A956CC /* Logger.swift in Sources */,
