@@ -32,19 +32,15 @@ class TVService {
         urlSession = URLSession(configuration: config)
     }
 
-    static func baseURLPortApiVersionString() -> String {
-        let baseURL = "http://10.0.0.4"
-        let port = 5000
-        let api = "api"
-        let version = "v1"
-
-        return baseURL + ":" + String(port) + "/" + api + "/" + version
-    }
-
+    /// implementation uses urlComponents, more reliable than String concatenation
     static func commandURL(tvCommand: TVCommand) -> URL? {
-        let urlString = TVService.baseURLPortApiVersionString() + "/tv/" + tvCommand.rawValue + "/"
-        let url = URL(string: urlString)
-        return url
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "http"
+        urlComponents.host = "10.0.0.4"
+        urlComponents.port = 5000
+        // path must start with "/"
+        urlComponents.path = "/api/v1/tv/\(tvCommand.rawValue)/"
+        return urlComponents.url
     }
 
     /// make a web request to a service

@@ -12,11 +12,6 @@ import XCTest
 class TVServiceTests: XCTestCase {
 
 
-    func testBaseURLPortApiVersionString() {
-        XCTAssertEqual(TVService.baseURLPortApiVersionString(),
-                       "http://10.0.0.4:5000/api/v1")
-    }
-
     func testCommandURLMute() {
         let url = TVService.commandURL(tvCommand: .mute)
         let expected = "Optional(http://10.0.0.4:5000/api/v1/tv/mute/)"
