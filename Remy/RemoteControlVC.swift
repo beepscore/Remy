@@ -12,6 +12,8 @@ class RemoteControlVC: UIViewController {
 
     @IBOutlet weak var statusLabel: UILabel!
 
+    @IBOutlet weak var powerButton: UIButton!
+    @IBOutlet weak var muteButton: UIButton!
     @IBOutlet weak var bassDecreaseButton: UIButton!
     @IBOutlet weak var bassIncreaseButton: UIButton!
     @IBOutlet weak var voiceDecreaseButton: UIButton!
@@ -58,9 +60,9 @@ class RemoteControlVC: UIViewController {
         configureSliders()
         configureButtons()
 
-        bassLabel.text = NSLocalizedString("Bass", comment: "Bass")
-        voiceLabel.text = NSLocalizedString("Voice", comment: "Voice")
-        volumeLabel.text = NSLocalizedString("Volume", comment: "Volume")
+        bassLabel.text = NSLocalizedString("BASS", comment: "BASS")
+        voiceLabel.text = NSLocalizedString("VOICE", comment: "VOICE")
+        volumeLabel.text = NSLocalizedString("VOLUME", comment: "VOLUME")
     }
 
     func configureSliders() {
@@ -88,6 +90,11 @@ class RemoteControlVC: UIViewController {
         voiceIncreaseButton.layer.cornerRadius = cornerRadius
         volumeDecreaseButton.layer.cornerRadius = cornerRadius
         volumeIncreaseButton.layer.cornerRadius = cornerRadius
+
+        powerButton.setTitle( NSLocalizedString("POWER", comment: "POWER"),
+                              for: .normal)
+        muteButton.setTitle( NSLocalizedString("MUTE", comment: "MUTE"),
+                              for: .normal)
     }
 
     func tintAudioLevelSlider(audioLevel: Float, audioThreshold: Float) {
