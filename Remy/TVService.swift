@@ -84,11 +84,8 @@ class TVService {
 
             if !(200...299).contains(httpResponse.statusCode)
                 && (httpResponse.statusCode != 304) {
-                // print("error=\(String(describing: error))")
-                // e.g. nw_socket_connect [C3:2] connect failed (fd 10) [64: Host is down]
-                //   - some : Error Domain=NSURLErrorDomain Code=-1005 "The network connection was lost." UserInfo={NSUnderlyingError=0x6000000f1da0 {Error Domain=kCFErrorDomainCFNetwork Code=-1005 "(null)" UserInfo={_kCFStreamErrorCodeKey=57, _kCFStreamErrorDomainKey=1}}, NSErrorFailingURLStringKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, NSErrorFailingURLKey=http://10.0.0.4:5000/api/v1/tv/volume_decrease/, _kCFStreamErrorDomainKey=1, _kCFStreamErrorCodeKey=57, NSLocalizedDescription=The network connection was lost.}
-
-                completion(.failure(TVServiceError.httpError(String(httpResponse.statusCode))))
+                completion(.failure(TVServiceError.httpError(status: httpResponse.statusCode,
+                                                             message: HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode))))
                 return
             }
 

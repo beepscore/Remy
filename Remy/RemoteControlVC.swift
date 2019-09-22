@@ -101,7 +101,9 @@ class RemoteControlVC: UIViewController {
             case .success(let tvResponse):
                 self.statusLabel.text = tvResponse.message
             case .failure(let error):
-                self.statusLabel.text = String(describing: error)
+                // e.g. "Could not connect to the server"
+                // "404 Not Found"
+                self.statusLabel.text = error.localizedDescription
             }
         }
     }
