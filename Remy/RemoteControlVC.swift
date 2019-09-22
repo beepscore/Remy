@@ -76,8 +76,8 @@ class RemoteControlVC: UIViewController {
         audioLimitSlider.minimumValue = AudioMonitor.levelMinDb
         audioLimitSlider.maximumValue = AudioMonitor.levelMaxDb
         audioLimitSlider.value = audioMonitor?.levelDbThreshold ?? 0.0
-        audioLimitSlider.tintColor = .black
-        audioLimitSlider.thumbTintColor = .black
+        audioLimitSlider.tintColor = .lightGray
+        audioLimitSlider.thumbTintColor = .lightGray
     }
 
     func configureButtons() {
