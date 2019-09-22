@@ -22,9 +22,13 @@ extension TVServiceError {
 
     public var errorDescription: String? {
         switch self {
+        case .dataNil:
+            return NSLocalizedString("Data nil", comment: "Response nil")
         case let .httpError(status, message):
             // e.g. "404 Not Found"
             return "\(status) \(message)"
+        case .responseNil:
+            return NSLocalizedString("Response nil", comment: "Response nil")
         default:
             return self.localizedDescription
         }
