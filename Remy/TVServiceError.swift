@@ -23,6 +23,10 @@ enum TVServiceError: LocalizedError {
 
 extension TVServiceError {
 
+    // LocalizedError errorDescription supplies info for error.localizedDescription
+    // for examples see TVServiceErrorTests.
+    // option click to see original documentation comment
+    // "A localized message describing what error occurred"
     public var errorDescription: String? {
         switch self {
             
