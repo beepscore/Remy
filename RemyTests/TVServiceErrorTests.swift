@@ -29,6 +29,14 @@ class TVServiceErrorTests: XCTestCase {
         }
     }
 
+    func testDataNil() {
+        do {
+            throw TVServiceError.dataNil
+        } catch let error {
+            XCTAssertEqual(error.localizedDescription, "Data nil")
+        }
+    }
+
     func testResponseNil() {
         do {
             throw TVServiceError.responseNil
