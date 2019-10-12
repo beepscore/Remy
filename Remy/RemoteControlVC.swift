@@ -101,6 +101,8 @@ class RemoteControlVC: UIViewController {
             case .success(let tvResponse):
                 self.statusLabel.text = tvResponse.message
             case .failure(let error):
+                // error may be type Error or any subclass e.g. DecodingError or TVServiceError
+                // error just needs to have a localizedDescription.
                 // e.g.
                 // "unsupported URL"
                 // "Could not connect to the server."
