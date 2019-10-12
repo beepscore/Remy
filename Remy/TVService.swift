@@ -99,8 +99,10 @@ class TVService {
                 let tvResponse = try decoder.decode(TVResponse.self, from: data)
                 completion(.success(tvResponse))
             } catch let error {
-                // use Swift DecodingError, not custom TVServiceError
-                // e.g. "The data couldn't be read because it is missing"
+                // catch Swift DecodingError
+                // use DecodingError "as is", don't create a custom TVServiceError.
+                // caller can use error.localizedDescription e.g. English localizedDescription
+                // "The data couldn't be read because it is missing"
                 completion(.failure(error))
             }
         }
