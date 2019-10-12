@@ -103,7 +103,8 @@ class RemoteControlVC: UIViewController {
             case .failure(let error):
                 // e.g.
                 // "unsupported URL"
-                // "Could not connect to the server"
+                // "Could not connect to the server."
+                // "The request timed out."
                 // "404 Not Found"
                 self.statusLabel.text = error.localizedDescription
             }
