@@ -39,11 +39,6 @@ extension TVServiceError {
 
         case .urlNil:
             return NSLocalizedString("URL nil", comment: "URL nil")
-            
-        default:
-            // any other LocalizedError or other TVServiceError
-            // e.g. Swift DecodingError with English localizedDescription "The data couldn't be read because it is missing"
-            return self.localizedDescription
         }
     }
 }
