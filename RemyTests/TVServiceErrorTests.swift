@@ -21,6 +21,14 @@ class TVServiceErrorTests: XCTestCase {
 //        }
 //    }
 
+    func testHttpError() {
+        do {
+            throw TVServiceError.httpError(status: 999, message: "wow")
+        } catch let error {
+            XCTAssertEqual(error.localizedDescription, "999 wow")
+        }
+    }
+
     func testResponseNil() {
         do {
             throw TVServiceError.responseNil
