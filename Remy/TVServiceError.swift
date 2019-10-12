@@ -31,7 +31,7 @@ extension TVServiceError {
         switch self {
             
         case .dataNil:
-            return NSLocalizedString("Data nil", comment: "Response nil")
+            return NSLocalizedString("Data nil", comment: "Data nil")
 
         case let .httpError(status, message):
             // use the associated values status and message
