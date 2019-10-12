@@ -37,4 +37,12 @@ class TVServiceErrorTests: XCTestCase {
         }
     }
 
+    func testUrlNil() {
+        do {
+            throw TVServiceError.urlNil
+        } catch let error {
+            XCTAssertEqual(error.localizedDescription, "URL nil")
+        }
+    }
+
 }
