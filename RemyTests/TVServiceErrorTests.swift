@@ -11,16 +11,6 @@ import XCTest
 
 class TVServiceErrorTests: XCTestCase {
 
-
-//    func testDecodingError() {
-//        do {
-//            throw DecodingError()
-//            // DecodingError cannot be constructed because it has no accessible initializers
-//        } catch let error {
-//            XCTAssertEqual(error.localizedDescription, "The data couldn't be read because it is missing")
-//        }
-//    }
-
     func testHttpError() {
         do {
             throw TVServiceError.httpError(status: 999, message: "wow")

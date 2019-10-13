@@ -22,6 +22,7 @@
 		DE6BDD9021F42AD500AB0B7B /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6BDD8F21F42AD500AB0B7B /* AudioMonitor.swift */; };
 		DE838B8722D243A4001E4927 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE838B8622D243A4001E4927 /* FileUtil.swift */; };
 		DE838B8922D243C8001E4927 /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE838B8822D243C8001E4927 /* FileUtilTests.swift */; };
+		DEA25C672353A32A00025518 /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA25C662353A32A00025518 /* ErrorTests.swift */; };
 		DEA5799E2352117C00BA5F12 /* TVServiceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5799D2352117C00BA5F12 /* TVServiceErrorTests.swift */; };
 		DEAEDCD622D2385700A956CC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAEDCD522D2385700A956CC /* Logger.swift */; };
 		DEDA4F11233730E5004F1B08 /* TVServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDA4F10233730E5004F1B08 /* TVServiceError.swift */; };
@@ -68,6 +69,7 @@
 		DE6BDD8F21F42AD500AB0B7B /* AudioMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 		DE838B8622D243A4001E4927 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		DE838B8822D243C8001E4927 /* FileUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtilTests.swift; sourceTree = "<group>"; };
+		DEA25C662353A32A00025518 /* ErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
 		DEA5799D2352117C00BA5F12 /* TVServiceErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVServiceErrorTests.swift; sourceTree = "<group>"; };
 		DEAEDCD522D2385700A956CC /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		DEDA4F10233730E5004F1B08 /* TVServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVServiceError.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		DE4292AA21F39E30006B3513 /* RemyTests */ = {
 			isa = PBXGroup;
 			children = (
+				DEA25C662353A32A00025518 /* ErrorTests.swift */,
 				DE838B8822D243C8001E4927 /* FileUtilTests.swift */,
 				DE4292AD21F39E30006B3513 /* Info.plist */,
 				DE2153AB21F3C043004C21D3 /* TVResponseTests.swift */,
@@ -316,6 +319,7 @@
 				DEA5799E2352117C00BA5F12 /* TVServiceErrorTests.swift in Sources */,
 				DE838B8922D243C8001E4927 /* FileUtilTests.swift in Sources */,
 				DE2153AC21F3C043004C21D3 /* TVResponseTests.swift in Sources */,
+				DEA25C672353A32A00025518 /* ErrorTests.swift in Sources */,
 				DE2153A821F3B7D3004C21D3 /* TVServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
