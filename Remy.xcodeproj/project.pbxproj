@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1A3D2A267C5273005705BE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1A3D29267C5273005705BE /* Settings.storyboard */; };
+		DE1A3D2C267C52EB005705BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1A3D2B267C52EB005705BE /* SettingsVC.swift */; };
+		DE1A3D2E267C5A6F005705BE /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1A3D2D267C5A6F005705BE /* SettingsModel.swift */; };
 		DE2153A621F3AF8C004C21D3 /* TVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A521F3AF8C004C21D3 /* TVService.swift */; };
 		DE2153A821F3B7D3004C21D3 /* TVServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A721F3B7D3004C21D3 /* TVServiceTests.swift */; };
 		DE2153AA21F3BE18004C21D3 /* TVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2153A921F3BE18004C21D3 /* TVResponse.swift */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE1A3D29267C5273005705BE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		DE1A3D2B267C52EB005705BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		DE1A3D2D267C5A6F005705BE /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		DE21539E21F3A957004C21D3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE21539F21F3A977004C21D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DE2153A521F3AF8C004C21D3 /* TVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVService.swift; sourceTree = "<group>"; };
@@ -100,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE1A3D2F267C5A83005705BE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A3D29267C5273005705BE /* Settings.storyboard */,
+				DE1A3D2D267C5A6F005705BE /* SettingsModel.swift */,
+				DE1A3D2B267C52EB005705BE /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		DE42928A21F39E2F006B3513 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +152,7 @@
 				DE42929821F39E2F006B3513 /* RemoteControlVC.swift */,
 				DE6AB39A2337F3FB00278A81 /* RemyBigButton.swift */,
 				DE6AB39C2337F6C800278A81 /* RemyLittleButton.swift */,
+				DE1A3D2F267C5A83005705BE /* Settings */,
 				DE2153A921F3BE18004C21D3 /* TVResponse.swift */,
 				DE2153A521F3AF8C004C21D3 /* TVService.swift */,
 				DEDA4F10233730E5004F1B08 /* TVServiceError.swift */,
@@ -275,6 +292,7 @@
 				DE4292A121F39E30006B3513 /* LaunchScreen.storyboard in Resources */,
 				DE42929E21F39E30006B3513 /* Assets.xcassets in Resources */,
 				DE42929C21F39E2F006B3513 /* Main.storyboard in Resources */,
+				DE1A3D2A267C5273005705BE /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +317,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1A3D2E267C5A6F005705BE /* SettingsModel.swift in Sources */,
+				DE1A3D2C267C52EB005705BE /* SettingsVC.swift in Sources */,
 				DE42929921F39E2F006B3513 /* RemoteControlVC.swift in Sources */,
 				DEDA4F11233730E5004F1B08 /* TVServiceError.swift in Sources */,
 				DE6AB39D2337F6C800278A81 /* RemyLittleButton.swift in Sources */,

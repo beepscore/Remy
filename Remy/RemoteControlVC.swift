@@ -166,4 +166,10 @@ class RemoteControlVC: UIViewController {
         }
     }
 
+    @IBAction func settingsTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let settingsVC = storyboard.instantiateViewController(withIdentifier: "SettingsVC")
+        self.present(settingsVC, animated: true)
+    }
+
 }

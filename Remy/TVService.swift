@@ -23,6 +23,7 @@ class TVService {
     }
 
     let urlSession: URLSession
+    static let settingsModel = SettingsModel()
 
     /// - Parameter timeoutSeconds: type TimeInterval matches URLSessionConfiguration property type
     init(timeoutSeconds: TimeInterval) {
@@ -38,11 +39,9 @@ class TVService {
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
 
-        // TODO: consider adding UI so user can change host address
-        // urlComponents.host = "10.0.0.4"
-        urlComponents.host = "10.0.0.179"
+        urlComponents.host = settingsModel.host
+        urlComponents.port = Int(settingsModel.port)
         
-        urlComponents.port = 5000
         // path must start with "/"
         urlComponents.path = "/api/v1/tv/\(tvCommand.rawValue)/"
         return urlComponents.url
