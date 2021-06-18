@@ -37,7 +37,11 @@ class TVService {
     static func commandURL(tvCommand: TVCommand) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
-        urlComponents.host = "10.0.0.4"
+
+        // TODO: consider adding UI so user can change host address
+        // urlComponents.host = "10.0.0.4"
+        urlComponents.host = "10.0.0.179"
+        
         urlComponents.port = 5000
         // path must start with "/"
         urlComponents.path = "/api/v1/tv/\(tvCommand.rawValue)/"
