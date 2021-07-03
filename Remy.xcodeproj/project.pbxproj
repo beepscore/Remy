@@ -12,7 +12,6 @@
 		DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D352690C3F300B83BF6 /* ContentView.swift */; };
 		DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D372690C3F400B83BF6 /* Assets.xcassets */; };
 		DE649D3B2690C3F400B83BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D3A2690C3F400B83BF6 /* Preview Assets.xcassets */; };
-		DE649D462690C3F400B83BF6 /* RemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D452690C3F400B83BF6 /* RemyTests.swift */; };
 		DE649D512690C3F400B83BF6 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D502690C3F400B83BF6 /* RemyUITests.swift */; };
 		DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F52690E5F000E77AFE /* FileUtilTests.swift */; };
 		DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F72690E61E00E77AFE /* FileUtil.swift */; };
@@ -54,7 +53,6 @@
 		DE649D3A2690C3F400B83BF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE649D3C2690C3F400B83BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE649D412690C3F400B83BF6 /* RemyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE649D452690C3F400B83BF6 /* RemyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyTests.swift; sourceTree = "<group>"; };
 		DE649D472690C3F400B83BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE649D4C2690C3F400B83BF6 /* RemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE649D502690C3F400B83BF6 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				DE27977C2690D193001BBE36 /* ErrorTests.swift */,
 				DEA195F52690E5F000E77AFE /* FileUtilTests.swift */,
 				DE649D472690C3F400B83BF6 /* Info.plist */,
-				DE649D452690C3F400B83BF6 /* RemyTests.swift */,
 				DEA195F92690E6B200E77AFE /* TVResponseTests.swift */,
 				DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */,
 				DEA195FF2690E75200E77AFE /* TVServiceTests.swift */,
@@ -328,7 +325,6 @@
 				DEA196102690E89C00E77AFE /* TVServiceErrorTests.swift in Sources */,
 				DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */,
 				DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */,
-				DE649D462690C3F400B83BF6 /* RemyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
