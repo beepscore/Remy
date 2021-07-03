@@ -11,7 +11,7 @@ import AVFoundation
 
 /// https://stackoverflow.com/questions/31230854/ios-detect-blow-into-mic-and-convert-the-results-swift
 /// https://stackoverflow.com/questions/35929989/how-to-monitor-audio-input-on-ios-using-swift-example
-class AudioMonitor {
+class AudioMonitor: ObservableObject {
 
     static let audioLevelNotificationName = Notification.Name("audioLevelNotification")
     static let audioLevelKey = "audioLevel"

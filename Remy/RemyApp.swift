@@ -12,6 +12,9 @@ struct RemyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                // adding this starts AudioMonitor running, which logs to Xcode console e.g.
+                // levelTimerCallback sound level: -52.11492 decibel, isLoud: false...
+                .environmentObject(AudioMonitor.shared)
         }
     }
 }
