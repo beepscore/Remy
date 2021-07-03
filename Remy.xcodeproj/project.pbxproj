@@ -25,6 +25,7 @@
 		DEA1960A2690E80200E77AFE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA196072690E80200E77AFE /* Settings.storyboard */; };
 		DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960B2690E82F00E77AFE /* TVServiceError.swift */; };
 		DEA1960E2690E85100E77AFE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960D2690E85100E77AFE /* Logger.swift */; };
+		DEA196102690E89C00E77AFE /* TVServiceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DEA196072690E80200E77AFE /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		DEA1960B2690E82F00E77AFE /* TVServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceError.swift; sourceTree = "<group>"; };
 		DEA1960D2690E85100E77AFE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceErrorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				DE649D472690C3F400B83BF6 /* Info.plist */,
 				DE649D452690C3F400B83BF6 /* RemyTests.swift */,
 				DEA195F92690E6B200E77AFE /* TVResponseTests.swift */,
+				DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */,
 				DEA195FF2690E75200E77AFE /* TVServiceTests.swift */,
 			);
 			path = RemyTests;
@@ -322,6 +325,7 @@
 			files = (
 				DEA196002690E75200E77AFE /* TVServiceTests.swift in Sources */,
 				DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */,
+				DEA196102690E89C00E77AFE /* TVServiceErrorTests.swift in Sources */,
 				DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */,
 				DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */,
 				DE649D462690C3F400B83BF6 /* RemyTests.swift in Sources */,
