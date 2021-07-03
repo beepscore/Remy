@@ -18,6 +18,13 @@
 		DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F72690E61E00E77AFE /* FileUtil.swift */; };
 		DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F92690E6B200E77AFE /* TVResponseTests.swift */; };
 		DEA195FC2690E6C700E77AFE /* TVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195FB2690E6C700E77AFE /* TVResponse.swift */; };
+		DEA195FE2690E72C00E77AFE /* TVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195FD2690E72C00E77AFE /* TVService.swift */; };
+		DEA196002690E75200E77AFE /* TVServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195FF2690E75200E77AFE /* TVServiceTests.swift */; };
+		DEA196082690E80200E77AFE /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA196052690E80200E77AFE /* SettingsModel.swift */; };
+		DEA196092690E80200E77AFE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA196062690E80200E77AFE /* SettingsVC.swift */; };
+		DEA1960A2690E80200E77AFE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA196072690E80200E77AFE /* Settings.storyboard */; };
+		DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960B2690E82F00E77AFE /* TVServiceError.swift */; };
+		DEA1960E2690E85100E77AFE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960D2690E85100E77AFE /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,13 @@
 		DEA195F72690E61E00E77AFE /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		DEA195F92690E6B200E77AFE /* TVResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVResponseTests.swift; sourceTree = "<group>"; };
 		DEA195FB2690E6C700E77AFE /* TVResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVResponse.swift; sourceTree = "<group>"; };
+		DEA195FD2690E72C00E77AFE /* TVService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVService.swift; path = Remy/TVService.swift; sourceTree = SOURCE_ROOT; };
+		DEA195FF2690E75200E77AFE /* TVServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceTests.swift; sourceTree = "<group>"; };
+		DEA196052690E80200E77AFE /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		DEA196062690E80200E77AFE /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		DEA196072690E80200E77AFE /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		DEA1960B2690E82F00E77AFE /* TVServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceError.swift; sourceTree = "<group>"; };
+		DEA1960D2690E85100E77AFE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +119,17 @@
 		DE649D322690C3F300B83BF6 /* Remy */ = {
 			isa = PBXGroup;
 			children = (
-				DE649D332690C3F300B83BF6 /* RemyApp.swift */,
-				DE649D352690C3F300B83BF6 /* ContentView.swift */,
 				DE649D372690C3F400B83BF6 /* Assets.xcassets */,
+				DE649D352690C3F300B83BF6 /* ContentView.swift */,
 				DEA195F72690E61E00E77AFE /* FileUtil.swift */,
 				DE649D3C2690C3F400B83BF6 /* Info.plist */,
+				DEA1960D2690E85100E77AFE /* Logger.swift */,
 				DE649D392690C3F400B83BF6 /* Preview Content */,
+				DE649D332690C3F300B83BF6 /* RemyApp.swift */,
+				DEA196042690E80200E77AFE /* Settings */,
 				DEA195FB2690E6C700E77AFE /* TVResponse.swift */,
+				DEA195FD2690E72C00E77AFE /* TVService.swift */,
+				DEA1960B2690E82F00E77AFE /* TVServiceError.swift */,
 			);
 			path = Remy;
 			sourceTree = "<group>";
@@ -127,11 +145,12 @@
 		DE649D442690C3F400B83BF6 /* RemyTests */ = {
 			isa = PBXGroup;
 			children = (
-				DE649D452690C3F400B83BF6 /* RemyTests.swift */,
 				DE27977C2690D193001BBE36 /* ErrorTests.swift */,
 				DEA195F52690E5F000E77AFE /* FileUtilTests.swift */,
-				DEA195F92690E6B200E77AFE /* TVResponseTests.swift */,
 				DE649D472690C3F400B83BF6 /* Info.plist */,
+				DE649D452690C3F400B83BF6 /* RemyTests.swift */,
+				DEA195F92690E6B200E77AFE /* TVResponseTests.swift */,
+				DEA195FF2690E75200E77AFE /* TVServiceTests.swift */,
 			);
 			path = RemyTests;
 			sourceTree = "<group>";
@@ -143,6 +162,16 @@
 				DE649D522690C3F400B83BF6 /* Info.plist */,
 			);
 			path = RemyUITests;
+			sourceTree = "<group>";
+		};
+		DEA196042690E80200E77AFE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DEA196052690E80200E77AFE /* SettingsModel.swift */,
+				DEA196062690E80200E77AFE /* SettingsVC.swift */,
+				DEA196072690E80200E77AFE /* Settings.storyboard */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA1960A2690E80200E77AFE /* Settings.storyboard in Resources */,
 				DE649D3B2690C3F400B83BF6 /* Preview Assets.xcassets in Resources */,
 				DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */,
 			);
@@ -274,10 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA196082690E80200E77AFE /* SettingsModel.swift in Sources */,
 				DEA195FC2690E6C700E77AFE /* TVResponse.swift in Sources */,
+				DEA195FE2690E72C00E77AFE /* TVService.swift in Sources */,
 				DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */,
+				DEA1960E2690E85100E77AFE /* Logger.swift in Sources */,
+				DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */,
 				DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */,
 				DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */,
+				DEA196092690E80200E77AFE /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA196002690E75200E77AFE /* TVServiceTests.swift in Sources */,
 				DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */,
 				DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */,
 				DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */,
