@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27977C2690D193001BBE36 /* ErrorTests.swift */; };
 		DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D332690C3F300B83BF6 /* RemyApp.swift */; };
 		DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D352690C3F300B83BF6 /* ContentView.swift */; };
 		DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D372690C3F400B83BF6 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE27977C2690D193001BBE36 /* ErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
 		DE649D302690C3F300B83BF6 /* Remy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE649D332690C3F300B83BF6 /* RemyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyApp.swift; sourceTree = "<group>"; };
 		DE649D352690C3F300B83BF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				DE649D452690C3F400B83BF6 /* RemyTests.swift */,
+				DE27977C2690D193001BBE36 /* ErrorTests.swift */,
 				DE649D472690C3F400B83BF6 /* Info.plist */,
 			);
 			path = RemyTests;
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */,
 				DE649D462690C3F400B83BF6 /* RemyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
