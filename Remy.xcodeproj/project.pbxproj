@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27977C2690D193001BBE36 /* ErrorTests.swift */; };
+		DE4A49782690EC7C00941525 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DE4A49772690EC7B00941525 /* LICENSE */; };
+		DE4A497A2690EC8900941525 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE4A49792690EC8900941525 /* README.md */; };
 		DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D332690C3F300B83BF6 /* RemyApp.swift */; };
 		DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D352690C3F300B83BF6 /* ContentView.swift */; };
 		DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D372690C3F400B83BF6 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		DE27977C2690D193001BBE36 /* ErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
+		DE4A49772690EC7B00941525 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE4A49792690EC8900941525 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DE649D302690C3F300B83BF6 /* Remy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE649D332690C3F300B83BF6 /* RemyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyApp.swift; sourceTree = "<group>"; };
 		DE649D352690C3F300B83BF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		DE649D272690C3F300B83BF6 = {
 			isa = PBXGroup;
 			children = (
+				DE4A49772690EC7B00941525 /* LICENSE */,
+				DE4A49792690EC8900941525 /* README.md */,
 				DE649D322690C3F300B83BF6 /* Remy */,
 				DE649D442690C3F400B83BF6 /* RemyTests */,
 				DE649D4F2690C3F400B83BF6 /* RemyUITests */,
@@ -282,6 +288,8 @@
 			files = (
 				DEA1960A2690E80200E77AFE /* Settings.storyboard in Resources */,
 				DE649D3B2690C3F400B83BF6 /* Preview Assets.xcassets in Resources */,
+				DE4A497A2690EC8900941525 /* README.md in Resources */,
+				DE4A49782690EC7C00941525 /* LICENSE in Resources */,
 				DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
