@@ -36,6 +36,7 @@ struct ContentView: View {
 
             Text(statusText)
                 .font(.title2)
+                .foregroundColor(.accentColor)
 
             HStack {
                 VStack {
@@ -46,6 +47,7 @@ struct ContentView: View {
                     })
                     .buttonStyle(BigButtonStyle())
                     Text("VOLUME")
+                        .foregroundColor(.accentColor)
                     Button("-", action: {
                         tvService.volumeDecrease() { res in
                             self.updateStatusText(result: res)
@@ -62,6 +64,7 @@ struct ContentView: View {
                     })
                     .buttonStyle(BigButtonStyle())
                     Text("VOICE")
+                        .foregroundColor(.accentColor)
                     Button("-", action: {
                         tvService.voiceDecrease() { res in
                             self.updateStatusText(result: res)
@@ -78,6 +81,7 @@ struct ContentView: View {
                     })
                     .buttonStyle(BigButtonStyle())
                     Text("BASS")
+                        .foregroundColor(.accentColor)
                     Button("-", action: {
                         tvService.bassDecrease() { res in
                             self.updateStatusText(result: res)
