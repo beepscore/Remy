@@ -14,6 +14,8 @@
 		DE649D3B2690C3F400B83BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D3A2690C3F400B83BF6 /* Preview Assets.xcassets */; };
 		DE649D462690C3F400B83BF6 /* RemyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D452690C3F400B83BF6 /* RemyTests.swift */; };
 		DE649D512690C3F400B83BF6 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D502690C3F400B83BF6 /* RemyUITests.swift */; };
+		DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F52690E5F000E77AFE /* FileUtilTests.swift */; };
+		DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F72690E61E00E77AFE /* FileUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		DE649D4C2690C3F400B83BF6 /* RemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE649D502690C3F400B83BF6 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
 		DE649D522690C3F400B83BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA195F52690E5F000E77AFE /* FileUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtilTests.swift; sourceTree = "<group>"; };
+		DEA195F72690E61E00E77AFE /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				DE649D332690C3F300B83BF6 /* RemyApp.swift */,
 				DE649D352690C3F300B83BF6 /* ContentView.swift */,
 				DE649D372690C3F400B83BF6 /* Assets.xcassets */,
+				DEA195F72690E61E00E77AFE /* FileUtil.swift */,
 				DE649D3C2690C3F400B83BF6 /* Info.plist */,
 				DE649D392690C3F400B83BF6 /* Preview Content */,
 			);
@@ -119,6 +124,7 @@
 			children = (
 				DE649D452690C3F400B83BF6 /* RemyTests.swift */,
 				DE27977C2690D193001BBE36 /* ErrorTests.swift */,
+				DEA195F52690E5F000E77AFE /* FileUtilTests.swift */,
 				DE649D472690C3F400B83BF6 /* Info.plist */,
 			);
 			path = RemyTests;
@@ -262,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */,
 				DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */,
 				DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */,
 			);
@@ -271,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */,
 				DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */,
 				DE649D462690C3F400B83BF6 /* RemyTests.swift in Sources */,
 			);
