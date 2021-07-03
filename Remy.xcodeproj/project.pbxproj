@@ -28,6 +28,7 @@
 		DEA1960E2690E85100E77AFE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960D2690E85100E77AFE /* Logger.swift */; };
 		DEA196102690E89C00E77AFE /* TVServiceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */; };
 		DEA196122690E98000E77AFE /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA196112690E98000E77AFE /* AudioMonitor.swift */; };
+		DED3FB1A2690F37B00248463 /* BigButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED3FB192690F37B00248463 /* BigButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DEA1960D2690E85100E77AFE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceErrorTests.swift; sourceTree = "<group>"; };
 		DEA196112690E98000E77AFE /* AudioMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
+		DED3FB192690F37B00248463 /* BigButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				DE649D372690C3F400B83BF6 /* Assets.xcassets */,
 				DEA196112690E98000E77AFE /* AudioMonitor.swift */,
+				DED3FB192690F37B00248463 /* BigButtonStyle.swift */,
 				DE649D352690C3F300B83BF6 /* ContentView.swift */,
 				DEA195F72690E61E00E77AFE /* FileUtil.swift */,
 				DE649D3C2690C3F400B83BF6 /* Info.plist */,
@@ -324,6 +327,7 @@
 				DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */,
 				DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */,
 				DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */,
+				DED3FB1A2690F37B00248463 /* BigButtonStyle.swift in Sources */,
 				DEA196092690E80200E77AFE /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
