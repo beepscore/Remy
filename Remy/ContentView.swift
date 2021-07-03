@@ -11,15 +11,29 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             HStack {
-                Button("+", action: {})
-                    .buttonStyle(BigButtonStyle())
+                VStack {
+                    Button("+", action: {})
+                        .buttonStyle(BigButtonStyle())
+                    Text("VOLUME")
+                    Button("-", action: {})
+                        .buttonStyle(BigButtonStyle())
+                }
 
-                Button("+", action: {})
-                    .buttonStyle(BigButtonStyle())
+                VStack {
+                    Button("+", action: {})
+                        .buttonStyle(BigButtonStyle())
+                    Text("VOICE")
+                    Button("-", action: {})
+                        .buttonStyle(BigButtonStyle())
+                }
 
-                Button("+", action: {})
-                    .buttonStyle(BigButtonStyle())
-
+                VStack {
+                    Button("+", action: {})
+                        .buttonStyle(BigButtonStyle())
+                    Text("BASS")
+                    Button("-", action: {})
+                        .buttonStyle(BigButtonStyle())
+                }
             }
             .padding()
         }
