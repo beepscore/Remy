@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        ZStack {
+            HStack {
+                Button("+", action: {})
+                    .buttonStyle(BigButtonStyle())
+
+                Button("+", action: {})
+                    .buttonStyle(BigButtonStyle())
+
+                Button("+", action: {})
+                    .buttonStyle(BigButtonStyle())
+
+            }
             .padding()
+        }
     }
 }
 
