@@ -25,6 +25,7 @@
 		DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960B2690E82F00E77AFE /* TVServiceError.swift */; };
 		DEA1960E2690E85100E77AFE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960D2690E85100E77AFE /* Logger.swift */; };
 		DEA196102690E89C00E77AFE /* TVServiceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */; };
+		DEA196122690E98000E77AFE /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA196112690E98000E77AFE /* AudioMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DEA1960B2690E82F00E77AFE /* TVServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceError.swift; sourceTree = "<group>"; };
 		DEA1960D2690E85100E77AFE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceErrorTests.swift; sourceTree = "<group>"; };
+		DEA196112690E98000E77AFE /* AudioMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				DE649D372690C3F400B83BF6 /* Assets.xcassets */,
+				DEA196112690E98000E77AFE /* AudioMonitor.swift */,
 				DE649D352690C3F300B83BF6 /* ContentView.swift */,
 				DEA195F72690E61E00E77AFE /* FileUtil.swift */,
 				DE649D3C2690C3F400B83BF6 /* Info.plist */,
@@ -307,6 +310,7 @@
 				DEA196082690E80200E77AFE /* SettingsModel.swift in Sources */,
 				DEA195FC2690E6C700E77AFE /* TVResponse.swift in Sources */,
 				DEA195FE2690E72C00E77AFE /* TVService.swift in Sources */,
+				DEA196122690E98000E77AFE /* AudioMonitor.swift in Sources */,
 				DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */,
 				DEA1960E2690E85100E77AFE /* Logger.swift in Sources */,
 				DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */,
