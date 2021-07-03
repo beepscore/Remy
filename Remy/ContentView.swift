@@ -8,31 +8,58 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    let tvService = TVService(timeoutSeconds: 10.0)
+
     var body: some View {
         ZStack {
             HStack {
                 VStack {
-                    Button("+", action: {})
-                        .buttonStyle(BigButtonStyle())
+                    Button("+", action: {
+                        tvService.volumeIncrease() { res in
+                            //self.updateStatusLabel(result: res)
+                        }
+                    })
+                    .buttonStyle(BigButtonStyle())
                     Text("VOLUME")
-                    Button("-", action: {})
-                        .buttonStyle(BigButtonStyle())
+                    Button("-", action: {
+                        tvService.volumeDecrease() { res in
+                            //self.updateStatusLabel(result: res)
+                        }
+                    })
+                    .buttonStyle(BigButtonStyle())
                 }
 
                 VStack {
-                    Button("+", action: {})
-                        .buttonStyle(BigButtonStyle())
+                    Button("+", action: {
+                        tvService.voiceIncrease() { res in
+                            //self.updateStatusLabel(result: res)
+                        }
+                    })
+                    .buttonStyle(BigButtonStyle())
                     Text("VOICE")
-                    Button("-", action: {})
-                        .buttonStyle(BigButtonStyle())
+                    Button("-", action: {
+                        tvService.voiceDecrease() { res in
+                            //self.updateStatusLabel(result: res)
+                        }
+                    })
+                    .buttonStyle(BigButtonStyle())
                 }
 
                 VStack {
-                    Button("+", action: {})
-                        .buttonStyle(BigButtonStyle())
+                    Button("+", action: {
+                        tvService.bassIncrease() { res in
+                            //self.updateStatusLabel(result: res)
+                        }
+                    })
+                    .buttonStyle(BigButtonStyle())
                     Text("BASS")
-                    Button("-", action: {})
-                        .buttonStyle(BigButtonStyle())
+                    Button("-", action: {
+                        tvService.bassDecrease() { res in
+                            //self.updateStatusLabel(result: res)
+                        }
+                    })
+                    .buttonStyle(BigButtonStyle())
                 }
             }
             .padding()
