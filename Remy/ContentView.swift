@@ -20,21 +20,7 @@ struct ContentView: View {
 
             Spacer()
 
-            HStack {
-                Button("POWER", action: {
-                    tvService.power() { res in
-                        tvService.updateStatusText(result: res)
-                    }
-                })
-                .buttonStyle(WideButtonStyle())
-
-                Button("MUTE", action: {
-                    tvService.mute() { res in
-                        tvService.updateStatusText(result: res)
-                    }
-                })
-                .buttonStyle(WideButtonStyle())
-            }
+            PowerMuteButtonsView(tvService: tvService)
 
             Spacer()
 
@@ -42,6 +28,7 @@ struct ContentView: View {
 
             Spacer()
         }
+        .padding()
     }
 }
 
