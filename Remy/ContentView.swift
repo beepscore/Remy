@@ -13,12 +13,18 @@ struct ContentView: View {
 
     @ObservedObject var tvService = TVService(timeoutSeconds: 10.0)
 
-    @State var audioLimit: Float = 0.0
+    // levelMaxDb == 0 and levelMinDb is < 0, so use levelMinDb/2
+    @State var audioLimit = AudioMonitor.levelMinDb / 2
 
     var body: some View {
         VStack {
 
-            HStack() {
+            VStack() {
+                Text("audio level: \(audioMonitor.level)")
+                Slider(value: $audioMonitor.level, in: AudioMonitor.levelMinDb...AudioMonitor.levelMaxDb)
+            }
+
+            VStack() {
                 Text("limit: \(audioLimit)")
                 Slider(value: $audioLimit, in: AudioMonitor.levelMinDb...AudioMonitor.levelMaxDb)
             }

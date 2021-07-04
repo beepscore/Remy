@@ -28,6 +28,8 @@ class AudioMonitor: ObservableObject {
     var recorder: AVAudioRecorder?
     var levelTimer = Timer()
 
+    @Published var level: Float = 0.0
+
     static let shared = AudioMonitor()
 
     private init() {
@@ -88,16 +90,17 @@ class AudioMonitor: ObservableObject {
     @objc func levelTimerCallback() {
         guard let recorder = recorder else { return }
 
-        // To obtain a current average power value,
-        // you must call the updateMeters() method before calling averagePower.
-        recorder.updateMeters()
-        let level = recorder.averagePower(forChannel: 0)
+        DispatchQueue.main.async { [self] in
+            // To obtain a current average power value,
+            // you must call the updateMeters() method before calling averagePower.
+            recorder.updateMeters()
 
-        let isLoud = level > levelDbThreshold
+            level = recorder.averagePower(forChannel: 0)
 
-        print("levelTimerCallback sound level: \(level) decibel, isLoud: \(isLoud)")
+            let isLoud = level > levelDbThreshold
 
-        DispatchQueue.main.async {
+            print("levelTimerCallback sound level: \(level) decibel, isLoud: \(isLoud)")
+
             NotificationCenter.default.post(name: AudioMonitor.audioLevelNotificationName,
                                             object: .none,
                                             userInfo: [AudioMonitor.audioLevelKey: level,
