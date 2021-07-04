@@ -22,8 +22,7 @@ struct SettingsView: View {
             TextField("\(settingsModel.host)", text: $settingsModel.host)
                 .keyboardType(.decimalPad)
         }
-        .font(.title)
-        .padding()
+        .modifier(SettingsViewModifier())
 
         Spacer()
 
@@ -32,8 +31,7 @@ struct SettingsView: View {
             TextField("\(settingsModel.port)", text: $settingsModel.port)
                 .keyboardType(.decimalPad)
         }
-        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-        .padding()
+        .modifier(SettingsViewModifier())
 
         Spacer()
 

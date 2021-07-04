@@ -18,6 +18,7 @@
 		DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D372690C3F400B83BF6 /* Assets.xcassets */; };
 		DE649D3B2690C3F400B83BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D3A2690C3F400B83BF6 /* Preview Assets.xcassets */; };
 		DE649D512690C3F400B83BF6 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D502690C3F400B83BF6 /* RemyUITests.swift */; };
+		DE75E76326919AAD002421C5 /* SettingsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE75E76226919AAD002421C5 /* SettingsViewModifier.swift */; };
 		DE91764B26916A7500EE9212 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764A26916A7500EE9212 /* AudioView.swift */; };
 		DE91764D26916F8400EE9212 /* AudioViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764C26916F8400EE9212 /* AudioViewTests.swift */; };
 		DE91764F2691715500EE9212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764E2691715500EE9212 /* SettingsView.swift */; };
@@ -71,6 +72,7 @@
 		DE649D4C2690C3F400B83BF6 /* RemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE649D502690C3F400B83BF6 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
 		DE649D522690C3F400B83BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE75E76226919AAD002421C5 /* SettingsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModifier.swift; sourceTree = "<group>"; };
 		DE91764A26916A7500EE9212 /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
 		DE91764C26916F8400EE9212 /* AudioViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewTests.swift; sourceTree = "<group>"; };
 		DE91764E2691715500EE9212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				DEA196052690E80200E77AFE /* SettingsModel.swift */,
 				DE91764E2691715500EE9212 /* SettingsView.swift */,
+				DE75E76226919AAD002421C5 /* SettingsViewModifier.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				DE4382AB26914C9500C0C928 /* WideButtonStyle.swift in Sources */,
 				DE51C99D26915B99009191F5 /* PowerMuteButtonsView.swift in Sources */,
 				DE91764F2691715500EE9212 /* SettingsView.swift in Sources */,
+				DE75E76326919AAD002421C5 /* SettingsViewModifier.swift in Sources */,
 				DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */,
 				DE51C99B269155F1009191F5 /* PlusMinusButtonsView.swift in Sources */,
 				DE9176512691868900EE9212 /* UIApplicationExtension.swift in Sources */,
