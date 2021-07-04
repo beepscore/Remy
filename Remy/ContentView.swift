@@ -14,6 +14,12 @@ struct ContentView: View {
     var body: some View {
         VStack {
 
+            Text(tvService.statusText)
+                .font(.title2)
+                .foregroundColor(.accentColor)
+
+            Spacer()
+
             HStack {
                 Button("POWER", action: {
                     tvService.power() { res in
@@ -32,12 +38,8 @@ struct ContentView: View {
 
             Spacer()
 
-            Text(tvService.statusText)
-                .font(.title2)
-                .foregroundColor(.accentColor)
-
             PlusMinusButtonsView(tvService: tvService)
-            
+
             Spacer()
         }
     }
