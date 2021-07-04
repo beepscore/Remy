@@ -14,6 +14,24 @@ struct ContentView: View {
     var body: some View {
         VStack {
 
+            HStack {
+                Button("POWER", action: {
+                    tvService.power() { res in
+                        tvService.updateStatusText(result: res)
+                    }
+                })
+                .buttonStyle(WideButtonStyle())
+
+                Button("MUTE", action: {
+                    tvService.mute() { res in
+                        tvService.updateStatusText(result: res)
+                    }
+                })
+                .buttonStyle(WideButtonStyle())
+            }
+
+            Spacer()
+
             Text(tvService.statusText)
                 .font(.title2)
                 .foregroundColor(.accentColor)
