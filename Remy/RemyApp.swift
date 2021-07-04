@@ -16,6 +16,7 @@ struct RemyApp: App {
                 // levelTimerCallback sound level: -52.11492 decibel, isLoud: false...
                 .environmentObject(AudioMonitor.shared)
                 .preferredColorScheme(.dark)
+                .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
         }
     }
 }

@@ -21,6 +21,7 @@
 		DE91764B26916A7500EE9212 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764A26916A7500EE9212 /* AudioView.swift */; };
 		DE91764D26916F8400EE9212 /* AudioViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764C26916F8400EE9212 /* AudioViewTests.swift */; };
 		DE91764F2691715500EE9212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764E2691715500EE9212 /* SettingsView.swift */; };
+		DE9176512691868900EE9212 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9176502691868900EE9212 /* UIApplicationExtension.swift */; };
 		DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F52690E5F000E77AFE /* FileUtilTests.swift */; };
 		DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F72690E61E00E77AFE /* FileUtil.swift */; };
 		DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F92690E6B200E77AFE /* TVResponseTests.swift */; };
@@ -75,6 +76,7 @@
 		DE91764A26916A7500EE9212 /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
 		DE91764C26916F8400EE9212 /* AudioViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewTests.swift; sourceTree = "<group>"; };
 		DE91764E2691715500EE9212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DE9176502691868900EE9212 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		DEA195F52690E5F000E77AFE /* FileUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtilTests.swift; sourceTree = "<group>"; };
 		DEA195F72690E61E00E77AFE /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		DEA195F92690E6B200E77AFE /* TVResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVResponseTests.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				DEA195FB2690E6C700E77AFE /* TVResponse.swift */,
 				DEA195FD2690E72C00E77AFE /* TVService.swift */,
 				DEA1960B2690E82F00E77AFE /* TVServiceError.swift */,
+				DE9176502691868900EE9212 /* UIApplicationExtension.swift */,
 			);
 			path = Remy;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				DE91764F2691715500EE9212 /* SettingsView.swift in Sources */,
 				DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */,
 				DE51C99B269155F1009191F5 /* PlusMinusButtonsView.swift in Sources */,
+				DE9176512691868900EE9212 /* UIApplicationExtension.swift in Sources */,
 				DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */,
 				DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */,
 				DED3FB1A2690F37B00248463 /* BigButtonStyle.swift in Sources */,
