@@ -18,6 +18,7 @@
 		DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D372690C3F400B83BF6 /* Assets.xcassets */; };
 		DE649D3B2690C3F400B83BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D3A2690C3F400B83BF6 /* Preview Assets.xcassets */; };
 		DE649D512690C3F400B83BF6 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D502690C3F400B83BF6 /* RemyUITests.swift */; };
+		DE91764B26916A7500EE9212 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764A26916A7500EE9212 /* AudioView.swift */; };
 		DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F52690E5F000E77AFE /* FileUtilTests.swift */; };
 		DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F72690E61E00E77AFE /* FileUtil.swift */; };
 		DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F92690E6B200E77AFE /* TVResponseTests.swift */; };
@@ -69,6 +70,7 @@
 		DE649D4C2690C3F400B83BF6 /* RemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE649D502690C3F400B83BF6 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
 		DE649D522690C3F400B83BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE91764A26916A7500EE9212 /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
 		DEA195F52690E5F000E77AFE /* FileUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtilTests.swift; sourceTree = "<group>"; };
 		DEA195F72690E61E00E77AFE /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		DEA195F92690E6B200E77AFE /* TVResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVResponseTests.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				DE649D372690C3F400B83BF6 /* Assets.xcassets */,
 				DEA196112690E98000E77AFE /* AudioMonitor.swift */,
+				DE91764A26916A7500EE9212 /* AudioView.swift */,
 				DE4382AC26914EF300C0C928 /* ButtonStyles */,
 				DE649D352690C3F300B83BF6 /* ContentView.swift */,
 				DEA195F72690E61E00E77AFE /* FileUtil.swift */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEA196082690E80200E77AFE /* SettingsModel.swift in Sources */,
+				DE91764B26916A7500EE9212 /* AudioView.swift in Sources */,
 				DEA195FC2690E6C700E77AFE /* TVResponse.swift in Sources */,
 				DEA195FE2690E72C00E77AFE /* TVService.swift in Sources */,
 				DEA196122690E98000E77AFE /* AudioMonitor.swift in Sources */,
