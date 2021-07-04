@@ -36,7 +36,7 @@ struct SettingsView: View {
         Spacer()
 
         Button("Done", action: { isPresented = false })
-            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            .font(.title)
 
         Spacer()
     }
