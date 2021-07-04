@@ -11,6 +11,7 @@
 		DE4382AB26914C9500C0C928 /* WideButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4382AA26914C9500C0C928 /* WideButtonStyle.swift */; };
 		DE4A49782690EC7C00941525 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DE4A49772690EC7B00941525 /* LICENSE */; };
 		DE4A497A2690EC8900941525 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE4A49792690EC8900941525 /* README.md */; };
+		DE51C99B269155F1009191F5 /* PlusMinusButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51C99A269155F1009191F5 /* PlusMinusButtonsView.swift */; };
 		DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D332690C3F300B83BF6 /* RemyApp.swift */; };
 		DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D352690C3F300B83BF6 /* ContentView.swift */; };
 		DE649D382690C3F400B83BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D372690C3F400B83BF6 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		DE4382AA26914C9500C0C928 /* WideButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideButtonStyle.swift; sourceTree = "<group>"; };
 		DE4A49772690EC7B00941525 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE4A49792690EC8900941525 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DE51C99A269155F1009191F5 /* PlusMinusButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButtonsView.swift; sourceTree = "<group>"; };
 		DE649D302690C3F300B83BF6 /* Remy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE649D332690C3F300B83BF6 /* RemyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyApp.swift; sourceTree = "<group>"; };
 		DE649D352690C3F300B83BF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				DEA196112690E98000E77AFE /* AudioMonitor.swift */,
 				DE4382AC26914EF300C0C928 /* ButtonStyles */,
 				DE649D352690C3F300B83BF6 /* ContentView.swift */,
+				DE51C99A269155F1009191F5 /* PlusMinusButtonsView.swift */,
 				DEA195F72690E61E00E77AFE /* FileUtil.swift */,
 				DE649D3C2690C3F400B83BF6 /* Info.plist */,
 				DEA1960D2690E85100E77AFE /* Logger.swift */,
@@ -337,6 +340,7 @@
 				DEA1960E2690E85100E77AFE /* Logger.swift in Sources */,
 				DE4382AB26914C9500C0C928 /* WideButtonStyle.swift in Sources */,
 				DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */,
+				DE51C99B269155F1009191F5 /* PlusMinusButtonsView.swift in Sources */,
 				DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */,
 				DE649D342690C3F300B83BF6 /* RemyApp.swift in Sources */,
 				DED3FB1A2690F37B00248463 /* BigButtonStyle.swift in Sources */,

@@ -36,59 +36,9 @@ struct ContentView: View {
                 .font(.title2)
                 .foregroundColor(.accentColor)
 
-            HStack {
-                VStack {
-                    Button("+", action: {
-                        tvService.volumeIncrease() { res in
-                            tvService.updateStatusText(result: res)
-                        }
-                    })
-                    .buttonStyle(BigButtonStyle())
-                    Text("VOLUME")
-                        .foregroundColor(.accentColor)
-                    Button("-", action: {
-                        tvService.volumeDecrease() { res in
-                            tvService.updateStatusText(result: res)
-                        }
-                    })
-                    .buttonStyle(BigButtonStyle())
-                }
-
-                VStack {
-                    Button("+", action: {
-                        tvService.voiceIncrease() { res in
-                            tvService.updateStatusText(result: res)
-                        }
-                    })
-                    .buttonStyle(BigButtonStyle())
-                    Text("VOICE")
-                        .foregroundColor(.accentColor)
-                    Button("-", action: {
-                        tvService.voiceDecrease() { res in
-                            tvService.updateStatusText(result: res)
-                        }
-                    })
-                    .buttonStyle(BigButtonStyle())
-                }
-
-                VStack {
-                    Button("+", action: {
-                        tvService.bassIncrease() { res in
-                            tvService.updateStatusText(result: res)
-                        }
-                    })
-                    .buttonStyle(BigButtonStyle())
-                    Text("BASS")
-                        .foregroundColor(.accentColor)
-                    Button("-", action: {
-                        tvService.bassDecrease() { res in
-                            tvService.updateStatusText(result: res)
-                        }
-                    })
-                    .buttonStyle(BigButtonStyle())
-                }
-            }
-            .padding()
+            PlusMinusButtonsView(tvService: tvService)
+            
+            Spacer()
         }
     }
 }
