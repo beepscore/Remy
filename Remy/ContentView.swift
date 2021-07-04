@@ -16,6 +16,8 @@ struct ContentView: View {
 
             AudioView()
 
+            Spacer()
+            
             Text(tvService.statusText)
                 .font(.title2)
                 .foregroundColor(.accentColor)
