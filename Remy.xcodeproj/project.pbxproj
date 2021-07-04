@@ -19,6 +19,7 @@
 		DE649D3B2690C3F400B83BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE649D3A2690C3F400B83BF6 /* Preview Assets.xcassets */; };
 		DE649D512690C3F400B83BF6 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D502690C3F400B83BF6 /* RemyUITests.swift */; };
 		DE91764B26916A7500EE9212 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764A26916A7500EE9212 /* AudioView.swift */; };
+		DE91764D26916F8400EE9212 /* AudioViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764C26916F8400EE9212 /* AudioViewTests.swift */; };
 		DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F52690E5F000E77AFE /* FileUtilTests.swift */; };
 		DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F72690E61E00E77AFE /* FileUtil.swift */; };
 		DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F92690E6B200E77AFE /* TVResponseTests.swift */; };
@@ -71,6 +72,7 @@
 		DE649D502690C3F400B83BF6 /* RemyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemyUITests.swift; sourceTree = "<group>"; };
 		DE649D522690C3F400B83BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE91764A26916A7500EE9212 /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		DE91764C26916F8400EE9212 /* AudioViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewTests.swift; sourceTree = "<group>"; };
 		DEA195F52690E5F000E77AFE /* FileUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtilTests.swift; sourceTree = "<group>"; };
 		DEA195F72690E61E00E77AFE /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		DEA195F92690E6B200E77AFE /* TVResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVResponseTests.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		DE649D442690C3F400B83BF6 /* RemyTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE91764C26916F8400EE9212 /* AudioViewTests.swift */,
 				DE27977C2690D193001BBE36 /* ErrorTests.swift */,
 				DEA195F52690E5F000E77AFE /* FileUtilTests.swift */,
 				DE649D472690C3F400B83BF6 /* Info.plist */,
@@ -363,6 +366,7 @@
 				DEA196002690E75200E77AFE /* TVServiceTests.swift in Sources */,
 				DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */,
 				DEA196102690E89C00E77AFE /* TVServiceErrorTests.swift in Sources */,
+				DE91764D26916F8400EE9212 /* AudioViewTests.swift in Sources */,
 				DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */,
 				DE27977D2690D193001BBE36 /* ErrorTests.swift in Sources */,
 			);
