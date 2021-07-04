@@ -11,6 +11,9 @@ struct SettingsView: View {
 
     var settingsModel = SettingsModel()
 
+    /// https://kristaps.me/blog/swiftui-modal-view/
+    @Binding var isPresented: Bool
+
     @State var hostTextFieldText: String {
         willSet {
             settingsModel.host = hostTextFieldText
@@ -41,12 +44,17 @@ struct SettingsView: View {
         }
 
         Spacer()
+
+        Button("Done", action: { isPresented = false })
+
+        Spacer()
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView(settingsModel: SettingsModel(),
+                     isPresented: .constant(true),
                      hostTextFieldText: "",
                      portTextFieldText: "")
     }
