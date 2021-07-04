@@ -15,6 +15,7 @@ struct RemyApp: App {
                 // adding this starts AudioMonitor running, which logs to Xcode console e.g.
                 // levelTimerCallback sound level: -52.11492 decibel, isLoud: false...
                 .environmentObject(AudioMonitor.shared)
+                .environmentObject(SettingsModel.shared)
                 .preferredColorScheme(.dark)
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
         }

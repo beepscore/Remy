@@ -43,9 +43,7 @@ struct ContentView: View {
         }
         .padding()
         .sheet(isPresented: $showSettingsView) {
-            SettingsView(isPresented: $showSettingsView,
-                         hostTextFieldText: "",
-                         portTextFieldText: "")
+            SettingsView(isPresented: $showSettingsView)
         }
     }
 }

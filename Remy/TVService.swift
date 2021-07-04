@@ -23,7 +23,9 @@ class TVService: ObservableObject {
     }
 
     let urlSession: URLSession
-    static let settingsModel = SettingsModel()
+
+    /// Use shared because TVService isn't a SwiftUI View, can't use @EnvironmentObject or @ObservedObject
+    static var settingsModel = SettingsModel.shared
 
     @Published var statusText = ""
 

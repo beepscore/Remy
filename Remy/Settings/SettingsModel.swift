@@ -8,7 +8,10 @@
 
 import Foundation
 
-class SettingsModel {
+class SettingsModel: ObservableObject {
+
+    // shared for use by non SwiftUI Views
+    static var shared = SettingsModel()
 
     let userDefaults = UserDefaults.standard
     let defaultsHostKey = "defaultsHostKey"

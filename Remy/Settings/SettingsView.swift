@@ -9,29 +9,17 @@ import SwiftUI
 
 struct SettingsView: View {
 
-    var settingsModel = SettingsModel()
+    @EnvironmentObject var settingsModel: SettingsModel
 
     /// https://kristaps.me/blog/swiftui-modal-view/
     @Binding var isPresented: Bool
-
-    @State var hostTextFieldText: String {
-        willSet {
-            settingsModel.host = hostTextFieldText
-        }
-    }
-
-    @State var portTextFieldText: String {
-        willSet {
-            settingsModel.port = portTextFieldText
-        }
-    }
 
     var body: some View {
         Spacer()
 
         HStack {
             Text("host:")
-            TextField("\(settingsModel.defaultHost)", text: $hostTextFieldText)
+            TextField("\(settingsModel.host)", text: $settingsModel.host)
                 .keyboardType(.decimalPad)
         }
 
@@ -39,7 +27,7 @@ struct SettingsView: View {
 
         HStack {
             Text("port:")
-            TextField("\(settingsModel.defaultPort)", text: $portTextFieldText)
+            TextField("\(settingsModel.port)", text: $settingsModel.port)
                 .keyboardType(.decimalPad)
         }
 
@@ -53,9 +41,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(settingsModel: SettingsModel(),
-                     isPresented: .constant(true),
-                     hostTextFieldText: "",
-                     portTextFieldText: "")
+        SettingsView(isPresented: .constant(true))
     }
 }
