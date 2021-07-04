@@ -9,7 +9,7 @@
 import Foundation
 import os.log
 
-class TVService {
+class TVService: ObservableObject {
 
     enum TVCommand: String {
         case mute = "mute"
@@ -24,6 +24,8 @@ class TVService {
 
     let urlSession: URLSession
     static let settingsModel = SettingsModel()
+
+    @Published var statusText = ""
 
     /// - Parameter timeoutSeconds: type TimeInterval matches URLSessionConfiguration property type
     init(timeoutSeconds: TimeInterval) {
@@ -112,6 +114,9 @@ class TVService {
         task.resume()
     }
 
+    // TODO: consider change request functions from using a completion to using Combine to publish a result
+    // https://www.hackingwithswift.com/books/ios-swiftui/sending-and-receiving-codable-data-with-urlsession-and-swiftui
+
     /// make a web request to a service to mute sound
     /// - Parameter completion: passed along to requestCommand
     func mute(completion: @escaping (Result<TVResponse, Error>) -> Void) {
@@ -158,6 +163,24 @@ class TVService {
     /// - Parameter completion: passed along to requestCommand
     func volumeIncrease(completion: @escaping (Result<TVResponse, Error>) -> Void) {
         requestCommand(tvCommand: .volumeIncrease,  completion: completion)
+    }
+
+    func updateStatusText(result: Result<TVResponse, Error>) {
+        DispatchQueue.main.async {
+            switch result {
+            case .success(let tvResponse):
+                self.statusText = tvResponse.message
+            case .failure(let error):
+                // error may be type Error or any subclass e.g. DecodingError or TVServiceError
+                // error just needs to have a localizedDescription.
+                // e.g.
+                // "unsupported URL"
+                // "Could not connect to the server."
+                // "The request timed out."
+                // "404 Not Found"
+                self.statusText = error.localizedDescription
+            }
+        }
     }
 
 }

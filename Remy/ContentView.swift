@@ -9,32 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
 
-    let tvService = TVService(timeoutSeconds: 10.0)
-
-    @State var statusText = ""
-
-    func updateStatusText(result: Result<TVResponse, Error>) {
-        DispatchQueue.main.async {
-            switch result {
-            case .success(let tvResponse):
-                self.statusText = tvResponse.message
-            case .failure(let error):
-                // error may be type Error or any subclass e.g. DecodingError or TVServiceError
-                // error just needs to have a localizedDescription.
-                // e.g.
-                // "unsupported URL"
-                // "Could not connect to the server."
-                // "The request timed out."
-                // "404 Not Found"
-                self.statusText = error.localizedDescription
-            }
-        }
-    }
+    @ObservedObject var tvService = TVService(timeoutSeconds: 10.0)
 
     var body: some View {
         VStack {
 
-            Text(statusText)
+            Text(tvService.statusText)
                 .font(.title2)
                 .foregroundColor(.accentColor)
 
@@ -42,7 +22,7 @@ struct ContentView: View {
                 VStack {
                     Button("+", action: {
                         tvService.volumeIncrease() { res in
-                            self.updateStatusText(result: res)
+                            tvService.updateStatusText(result: res)
                         }
                     })
                     .buttonStyle(BigButtonStyle())
@@ -50,7 +30,7 @@ struct ContentView: View {
                         .foregroundColor(.accentColor)
                     Button("-", action: {
                         tvService.volumeDecrease() { res in
-                            self.updateStatusText(result: res)
+                            tvService.updateStatusText(result: res)
                         }
                     })
                     .buttonStyle(BigButtonStyle())
@@ -59,7 +39,7 @@ struct ContentView: View {
                 VStack {
                     Button("+", action: {
                         tvService.voiceIncrease() { res in
-                            self.updateStatusText(result: res)
+                            tvService.updateStatusText(result: res)
                         }
                     })
                     .buttonStyle(BigButtonStyle())
@@ -67,7 +47,7 @@ struct ContentView: View {
                         .foregroundColor(.accentColor)
                     Button("-", action: {
                         tvService.voiceDecrease() { res in
-                            self.updateStatusText(result: res)
+                            tvService.updateStatusText(result: res)
                         }
                     })
                     .buttonStyle(BigButtonStyle())
@@ -76,7 +56,7 @@ struct ContentView: View {
                 VStack {
                     Button("+", action: {
                         tvService.bassIncrease() { res in
-                            self.updateStatusText(result: res)
+                            tvService.updateStatusText(result: res)
                         }
                     })
                     .buttonStyle(BigButtonStyle())
@@ -84,7 +64,7 @@ struct ContentView: View {
                         .foregroundColor(.accentColor)
                     Button("-", action: {
                         tvService.bassDecrease() { res in
-                            self.updateStatusText(result: res)
+                            tvService.updateStatusText(result: res)
                         }
                     })
                     .buttonStyle(BigButtonStyle())
