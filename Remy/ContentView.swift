@@ -20,14 +20,14 @@ struct ContentView: View {
         VStack {
 
             VStack() {
-                Text("audio level: \(audioMonitor.level, specifier: "%.2f")")
+                Text("audio level dB: \(Int(audioMonitor.level))")
                 Slider(value: $audioMonitor.level, in: AudioMonitor.levelMinDb...AudioMonitor.levelMaxDb)
                     // allowsHitTesting false disables user interaction
                     .allowsHitTesting(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
             }
 
             VStack() {
-                Text("limit: \(audioLimit, specifier: "%.2f")")
+                Text("limit dB: \(Int(audioLimit))")
                 Slider(value: $audioLimit, in: AudioMonitor.levelMinDb...AudioMonitor.levelMaxDb)
             }
 
