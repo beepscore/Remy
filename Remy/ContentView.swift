@@ -22,6 +22,8 @@ struct ContentView: View {
             VStack() {
                 Text("audio level: \(audioMonitor.level)")
                 Slider(value: $audioMonitor.level, in: AudioMonitor.levelMinDb...AudioMonitor.levelMaxDb)
+                    // allowsHitTesting false disables user interaction
+                    .allowsHitTesting(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
             }
 
             VStack() {
