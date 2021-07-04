@@ -20,6 +20,7 @@
 		DE649D512690C3F400B83BF6 /* RemyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE649D502690C3F400B83BF6 /* RemyUITests.swift */; };
 		DE91764B26916A7500EE9212 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764A26916A7500EE9212 /* AudioView.swift */; };
 		DE91764D26916F8400EE9212 /* AudioViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764C26916F8400EE9212 /* AudioViewTests.swift */; };
+		DE91764F2691715500EE9212 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91764E2691715500EE9212 /* SettingsView.swift */; };
 		DEA195F62690E5F000E77AFE /* FileUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F52690E5F000E77AFE /* FileUtilTests.swift */; };
 		DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F72690E61E00E77AFE /* FileUtil.swift */; };
 		DEA195FA2690E6B200E77AFE /* TVResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195F92690E6B200E77AFE /* TVResponseTests.swift */; };
@@ -73,6 +74,7 @@
 		DE649D522690C3F400B83BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE91764A26916A7500EE9212 /* AudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
 		DE91764C26916F8400EE9212 /* AudioViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewTests.swift; sourceTree = "<group>"; };
+		DE91764E2691715500EE9212 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DEA195F52690E5F000E77AFE /* FileUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtilTests.swift; sourceTree = "<group>"; };
 		DEA195F72690E61E00E77AFE /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		DEA195F92690E6B200E77AFE /* TVResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVResponseTests.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				DEA196052690E80200E77AFE /* SettingsModel.swift */,
 				DEA196062690E80200E77AFE /* SettingsVC.swift */,
 				DEA196072690E80200E77AFE /* Settings.storyboard */,
+				DE91764E2691715500EE9212 /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				DEA1960E2690E85100E77AFE /* Logger.swift in Sources */,
 				DE4382AB26914C9500C0C928 /* WideButtonStyle.swift in Sources */,
 				DE51C99D26915B99009191F5 /* PowerMuteButtonsView.swift in Sources */,
+				DE91764F2691715500EE9212 /* SettingsView.swift in Sources */,
 				DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */,
 				DE51C99B269155F1009191F5 /* PlusMinusButtonsView.swift in Sources */,
 				DE649D362690C3F300B83BF6 /* ContentView.swift in Sources */,

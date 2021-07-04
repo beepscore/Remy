@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SettingsModel {
+class SettingsModel {
 
     let userDefaults = UserDefaults.standard
     let defaultsHostKey = "defaultsHostKey"

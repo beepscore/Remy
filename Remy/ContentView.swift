@@ -11,13 +11,15 @@ struct ContentView: View {
 
     @ObservedObject var tvService = TVService(timeoutSeconds: 10.0)
 
+    @State var showSettingsView = false
+
     var body: some View {
         VStack {
 
             AudioView()
 
             Spacer()
-            
+
             Text(tvService.statusText)
                 .font(.title2)
                 .foregroundColor(.accentColor)
@@ -31,8 +33,19 @@ struct ContentView: View {
             PlusMinusButtonsView(tvService: tvService)
 
             Spacer()
+
+            HStack {
+                Spacer()
+                Button("Settings", action: {
+                    showSettingsView = true
+                })
+            }
         }
         .padding()
+        .sheet(isPresented: $showSettingsView) {
+            SettingsView(hostTextFieldText: "",
+                         portTextFieldText: "")
+        }
     }
 }
 
