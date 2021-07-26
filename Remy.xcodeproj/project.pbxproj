@@ -31,7 +31,6 @@
 		DEA196002690E75200E77AFE /* TVServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA195FF2690E75200E77AFE /* TVServiceTests.swift */; };
 		DEA196082690E80200E77AFE /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA196052690E80200E77AFE /* SettingsModel.swift */; };
 		DEA1960C2690E82F00E77AFE /* TVServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960B2690E82F00E77AFE /* TVServiceError.swift */; };
-		DEA1960E2690E85100E77AFE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960D2690E85100E77AFE /* Logger.swift */; };
 		DEA196102690E89C00E77AFE /* TVServiceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */; };
 		DEA196122690E98000E77AFE /* AudioMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA196112690E98000E77AFE /* AudioMonitor.swift */; };
 		DED3FB1A2690F37B00248463 /* BigButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED3FB192690F37B00248463 /* BigButtonStyle.swift */; };
@@ -85,7 +84,6 @@
 		DEA195FF2690E75200E77AFE /* TVServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceTests.swift; sourceTree = "<group>"; };
 		DEA196052690E80200E77AFE /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		DEA1960B2690E82F00E77AFE /* TVServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceError.swift; sourceTree = "<group>"; };
-		DEA1960D2690E85100E77AFE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		DEA1960F2690E89C00E77AFE /* TVServiceErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVServiceErrorTests.swift; sourceTree = "<group>"; };
 		DEA196112690E98000E77AFE /* AudioMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMonitor.swift; sourceTree = "<group>"; };
 		DED3FB192690F37B00248463 /* BigButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonStyle.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				DE649D352690C3F300B83BF6 /* ContentView.swift */,
 				DEA195F72690E61E00E77AFE /* FileUtil.swift */,
 				DE649D3C2690C3F400B83BF6 /* Info.plist */,
-				DEA1960D2690E85100E77AFE /* Logger.swift */,
 				DE51C99A269155F1009191F5 /* PlusMinusButtonsView.swift */,
 				DE51C99C26915B99009191F5 /* PowerMuteButtonsView.swift */,
 				DE649D392690C3F400B83BF6 /* Preview Content */,
@@ -349,7 +346,6 @@
 				DEA195FE2690E72C00E77AFE /* TVService.swift in Sources */,
 				DEA196122690E98000E77AFE /* AudioMonitor.swift in Sources */,
 				DEA195F82690E61E00E77AFE /* FileUtil.swift in Sources */,
-				DEA1960E2690E85100E77AFE /* Logger.swift in Sources */,
 				DE4382AB26914C9500C0C928 /* WideButtonStyle.swift in Sources */,
 				DE51C99D26915B99009191F5 /* PowerMuteButtonsView.swift in Sources */,
 				DE91764F2691715500EE9212 /* SettingsView.swift in Sources */,

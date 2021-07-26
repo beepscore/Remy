@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import os.log
+import OSLog
 
 class TVService: ObservableObject {
 
@@ -21,6 +21,9 @@ class TVService: ObservableObject {
         case volumeDecrease = "volume-decrease"
         case volumeIncrease = "volume-increase"
     }
+
+    /// logger for TVService. One app can have multiple loggers.
+    let logger = Logger(subsystem: SettingsModel.loggerSubsytem, category: "TVService")
 
     let urlSession: URLSession
 
@@ -56,6 +59,7 @@ class TVService: ObservableObject {
                         completion: @escaping (Result<TVResponse, Error>) -> Void) {
 
         guard let url = TVService.commandURL(tvCommand: tvCommand) else {
+            logger.error("requestCommand TVServiceError.urlNil")
             completion(.failure(TVServiceError.urlNil))
             return
         }
@@ -65,14 +69,7 @@ class TVService: ObservableObject {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
 
-        // Apple suggests "Don’t include symbol information or source file line numbers in messages. The system automatically captures this information."
-        // https://developer.apple.com/documentation/os/logging
-        // https://stackoverflow.com/questions/52366951/apple-unified-logging-how-to-get-file-name-and-line-number
-        os_log("file: %s function: %s %s",
-               log: Logger.shared.log,
-               type: .debug,
-               FileUtil.baseFilename(path: #file), #function,
-               String(describing: request))
+        logger.debug("requestCommand \(String(describing: request), privacy: .public)")
 
         // dataTask will pass data, response, error to its completionHandler
         let task = urlSession.dataTask(with: request) { data, response, error in
@@ -80,23 +77,29 @@ class TVService: ObservableObject {
             // https://stackoverflow.com/questions/55847474/how-to-use-new-result-type-introduced-in-swift-5-urlsession
 
             if let error = error {
+                self.logger.error("requestCommand \(error.localizedDescription)")
                 completion(.failure(error))
                 return
             }
 
             guard let httpResponse = response as? HTTPURLResponse else {
+                self.logger.error("requestCommand TVServiceError.responseNil")
                 completion(.failure(TVServiceError.responseNil))
                 return
             }
 
             if !(200...299).contains(httpResponse.statusCode)
                 && (httpResponse.statusCode != 304) {
-                completion(.failure(TVServiceError.httpError(status: httpResponse.statusCode,
-                                                             message: HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode))))
+                let message = HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)
+
+                self.logger.error("requestCommand TVServiceError.httpError status \(httpResponse.statusCode, privacy: .public), message \(message, privacy: .public)")
+
+                completion(.failure(TVServiceError.httpError(status: httpResponse.statusCode, message: message)))
                 return
             }
 
             guard let data = data else {
+                self.logger.error("requestCommand TVServiceError.dataNil")
                 completion(.failure(TVServiceError.dataNil))
                 return
             }
@@ -108,6 +111,8 @@ class TVService: ObservableObject {
             } catch let error {
                 // catch Swift DecodingError
                 // use DecodingError "as is", don't create a custom TVServiceError.
+                self.logger.error("requestCommand \(error.localizedDescription, privacy: .public)")
+                
                 // caller can use error.localizedDescription e.g. English localizedDescription
                 // "The data couldn't be read because it is missing"
                 completion(.failure(error))

@@ -10,6 +10,8 @@ import Foundation
 
 class SettingsModel: ObservableObject {
 
+    static let loggerSubsytem = Bundle.main.bundleIdentifier ?? "Remy"
+
     // shared for use by non SwiftUI Views
     static var shared = SettingsModel()
 
