@@ -53,7 +53,10 @@ class AudioMonitor: ObservableObject {
 
         let audioSession = AVAudioSession.sharedInstance()
         do {
+
             // https://github.com/lionheart/openradar-mirror/issues/20118
+            // TODO: consider fix simulator console log "[plugin] AddInstanceForFactory: No factory registered"
+            // https://stackoverflow.com/questions/58360765/swift-5-1-error-plugin-addinstanceforfactory-no-factory-registered-for-id-c
             try AVAudioSession.sharedInstance().setCategory(.playAndRecord,
                                                             mode: AVAudioSession.Mode.default,
                                                             options: [AVAudioSession.CategoryOptions.mixWithOthers])
