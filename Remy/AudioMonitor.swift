@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+import OSLog
 
 /// https://stackoverflow.com/questions/31230854/ios-detect-blow-into-mic-and-convert-the-results-swift
 /// https://stackoverflow.com/questions/35929989/how-to-monitor-audio-input-on-ios-using-swift-example
@@ -31,6 +32,8 @@ class AudioMonitor: ObservableObject {
     @Published var level: Float = 0.0
 
     static let shared = AudioMonitor()
+
+    let logger = Logger(subsystem: SettingsModel.loggerSubsytem, category: "AudioMonitor")
 
     private init() {
 
@@ -102,7 +105,7 @@ class AudioMonitor: ObservableObject {
 
             let isLoud = level > levelDbThreshold
 
-            print("levelTimerCallback sound level: \(level) decibel, isLoud: \(isLoud)")
+            logger.debug("levelTimerCallback sound level: \(level, privacy: .public) decibel, isLoud: \(isLoud, privacy: .public)")
 
             NotificationCenter.default.post(name: AudioMonitor.audioLevelNotificationName,
                                             object: .none,
@@ -112,7 +115,7 @@ class AudioMonitor: ObservableObject {
     }
 
     @objc func stopRecordingAndDelete() {
-        print("stopRecordingAndDelete")
+        logger.debug("stopRecordingAndDelete")
         recorder?.stop()
         // The audio recorder must be stopped before you call deleteRecording.
         recorder?.deleteRecording()
